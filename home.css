@@ -104,8 +104,13 @@ body{
 	font-family: helvetica;
 	text-align: center
 }
-h2{
-	font-family: arial;
+h1{
+	font-family: georgia;
+	
+}
+
+p{
+font-size:180%
 }
 
 a:link {color:#FF8C00;}  
