@@ -78,7 +78,7 @@ body{
 .questions {
     background: none repeat scroll 0 0;
 	top: 400px;
-	left: 200px;
+	left: 80px;
     position: absolute;
 	color:#3991CC;
 	font-family: helvetica;
@@ -98,14 +98,19 @@ body{
 .mentors {
     background: none repeat scroll 0 0;
 	top: 50px;
-	left: 490px;
+	left: 430px;
     position: absolute;
 	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
 }
-h2{
-	font-family: arial;
+h1{
+	font-family: georgia;
+	
+}
+
+p{
+font-size:180%
 }
 
 a:link {color:#FF8C00;}  
