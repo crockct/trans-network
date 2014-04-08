@@ -1,59 +1,106 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<Title>Trans*Network</Title>
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
-	<!-- Basic code structure from http://www.sitepoint.com/twitter-bootstrap-tutorial-handling-complex-designs/ -->
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trans*Network</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="home.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+		$(function() {
+	  // Setup drop down menu
+	  $('.dropdown-toggle').dropdown();
+	 
+	  // Fix input element click problem
+	  $('.dropdown input, .dropdown label').click(function(e) {
+		e.stopPropagation();
+	  });
+	});
+	</script>
+  </head>
+  <body>
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Mentoring</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Questions <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ask Questions</a></li>
+            <li><a href="#">Unanswered Questions</a></li>
+            <li class="divider"></li>
+          </ul>
+        </li>
+		<li><a href="#">Stories</a></li>
+		<li><a href="#">People</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_up">Sign Up</a></li>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <!-- Login form here -->
+			  <form action="" method="post" accept-charset="UTF-8">
+			  <p> Username </p>
+			  <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
+			  <p> Password </p>
+			  <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+			  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+			  <label class="string optional" for="user_remember_me"> Remember me</label>
+			 
+			  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+			  <p></p>
+			  </form>
+            </div>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
 	<div class="container">
-		<h1>Trans*Network</h1>
-		<div class="navbar">
-		<div class="navbar-inner">
-			<div class="container">
-				<ul class="nav">
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="#">Questions</a></li>
-				<li><a href="#">Mentoring</a></li>
-				<li><a href="#">Stories</a></li>
-				</ul>
-			</div>
+		<img class="logo" src="img/logo.png"/>
+		<div class="questions">
+			<h2>Questions</h2>
+			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
 		</div>
-		
-		<div class="hero-unit">
-			<h1>Marketing stuff!</h1>
-			<p>Some text or maybe our picture here</p>
-			<a href="#" class="btn btn-large btn-success">Get Started</a>
+		<div class="stories">
+			<h2>Stories</h2>
+			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
 		</div>
-		
-		<div class="row">
-			<div class="span4">
-			<p>Do we want a left sidebar? With more navagation/links? That's what is suggested</p>
-			</div>
-			<div class="span8">
-			<h3>Header 3</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span4">
-			<h4 class="muted text-center">About</h4>
-			</div>
-			<div class="span4">
-			<h4 class="muted text-center">Something else</h4>
-			</div>
-			<div class="span4">
-			<h4 class="muted text-center">Contact Us</h4>
-			<a href="#" class="btn btn-info">Contact Us</a>
-			</div>
-			<hr></hr>
-			<div class="footer">
-			<p>&copy; 2014</p>
-			</div>
-			
-		</div>
+		<div class="mentors">
+			<h2>Mentoring</h2>
+			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
+		</div>		
 	</div>
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="js/bootstrap.js"></script>
-</body>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
