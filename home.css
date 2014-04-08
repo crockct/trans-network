@@ -79,7 +79,7 @@ body{
     background: none repeat scroll 0 0;
 	top: 400px;
 	left: 200px;
-    position: absolute;
+    position: absolute; /* this is so that the text is over the picture */
 	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
@@ -89,7 +89,7 @@ body{
     background: none repeat scroll 0 0;
 	top: 400px;
 	left: 775px;
-    position: absolute;
+    position: absolute; /* this is so that the text is over the picture */
 	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
@@ -99,7 +99,7 @@ body{
     background: none repeat scroll 0 0;
 	top: 50px;
 	left: 490px;
-    position: absolute;
+    position: absolute; /* this is so that the text is over the picture */
 	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
