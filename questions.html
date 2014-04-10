@@ -86,10 +86,14 @@
 
 	<div class="container">
 		<h1>Questions</h1>
-		<button type="button" class="btn btn-default btn-lg pull-right">
-			
-			<span class="glyphicon glyphicon-star"></span><!-- from http://glyphicons.com/ -->
-		</button>
+		
+		<form class="form-inline pull-right" role="form">
+			<input type="text" class="form-control" placeholder="Search Questions"></input>
+			<button type="button" class="btn btn-default btn-lg"> 
+				<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
+			</button>
+		</form> <!-- form tag puts button side by side with input text box -->
+
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>

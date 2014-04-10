@@ -4,4 +4,5 @@
 
 .pull-right{
 	float: right;
+	padding-right: 15px; /* to match bootstrap container padding */
 	}
