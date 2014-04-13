@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trans*Network</title>
+    <title>Trans*Network | Stories</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="index.html">Home</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,22 +83,40 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-	<div class="container">
-		<img class="logo" src="img/logo.png"/>
-		<div class="questions">
-			<h1><a href="questions.html">Questions</a></h1>
 
-			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
+	<div class="container">
+		<h1>Stories</h1>
+		<p>Search box goes here-ish.</p>
+		
+		<!-- Tabs used for navagation -->
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#hot1" data-toggle="tab">Hot Stories</a></li>
+			<li><a href="#topic1" data-toggle="tab">By Topic</a></li>
+			<li><a href="#followed1" data-toggle="tab">Followed</a></li>
+			<li><a href="#myStory" data-toggle="tab">My Story</a></li>
+			<li><a href="#all1" data-toggle="tab">All Stories</a></li>
+		</ul>
+		
+		<!-- Tab Pane Contents -- (from http://getbootstrap.com/javascript/#tabs) -->
+		<div class="tab-content">
+			<div class="tab-pane active" id="hot1">
+				<p>hot stories here</p>
+			</div>
+			<div class="tab-pane" id="topic1">
+				<p>by topic here</p>
+			</div>
+			<div class="tab-pane" id="followed1">
+				<p>followed here</p>
+			</div>
+			<div class="tab-pane" id="myStory">
+				<p>my story here</p>
+			</div>
+			<div class="tab-pane" id="all1">
+				<p>all here</p>
+			</div>
+			
 		</div>
-		<div class="stories">
-			<h1><a href="Stories.html">Stories</a></h1>
-			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
-		</div>
-		<div class="mentors">
-			<h1>Mentoring</h1>
-			<p><a href="blah">Ask</a> and <a href="blah">answer</a> questions</p>
-		</div>		
-	</div>
+	</div><!-- end container used for content -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
