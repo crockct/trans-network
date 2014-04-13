@@ -9,8 +9,12 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/bootstrap-responsive.css"><!--for different sized screens -->
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="home.css" />
-
+	
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,14 +22,15 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script>
-		$(function() {
-	  // Setup drop down menu
-	  $('.dropdown-toggle').dropdown();
-	 
-	  // Fix input element click problem
-	  $('.dropdown input, .dropdown label').click(function(e) {
+	$(function() {
+	  $('.dropdown-toggle').dropdown(); // Setup drop down menu
+	  var askDiv = document.getElementById('askquestion');
+	  
+	  $('.dropdown input, .dropdown label').click(function(e) { // Fix input element click problem
 		e.stopPropagation();
 	  });
+	  
+	
 	});
 	</script>
   </head>
@@ -87,12 +92,55 @@
 	<div class="container">
 		<h1>Questions</h1>
 		
-		<form class="form-inline pull-right" role="form">
-			<input type="text" class="form-control" placeholder="Search Questions"></input>
-			<button type="button" class="btn btn-default btn-lg"> 
-				<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
-			</button>
-		</form> <!-- form tag puts button side by side with input text box -->
+		<!-- Search -->
+		<div class="col-md-4 pull-right">
+		<div class="input-group">
+			<span class="input-group-addon">
+				<input type="text" class="input-control" placeholder="Search Questions">
+				<button type="button" class="btn btn-default"> 
+					<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
+				</button>
+			</span>
+		</div>
+		</div>
+		
+		<!-- Ask a Question -->
+		<form class="row form" id="askquestion">
+			<h2>Ask a Question</h2>
+			<p>To improve your chances of having your questions answered...</p>
+			<table class="col-md-12">
+				<tr>	
+					<td class="pull-right"><div class="input-group-lg">
+						<p>Title</p>
+					</td>
+					<td><input type="text" class="form-control" id="qtitle" maxlength="250" 
+						placeholder="Title" autofocus required></input></div>
+					</td>
+				</tr>
+				<tr>			
+					<td class="pull-right">Question</td>
+					<td><textarea class="form-control" id="qcontent" placeholder="Question" required></textarea></td>
+				</tr>
+				<tr>
+					<td class="pull-right" width="250px">
+						<p>Send me an email when answered</p>
+					</td>
+						
+					<td>
+						<div class="input-group">
+							<span class="input-group-addon">
+								<input type="checkbox">
+							</span>
+							<input type="email" class="form-control">
+						</div><!-- /input-group -->
+					</td>
+				</tr>
+				<tr><td></td>
+					<td>
+					<input class="btn btn-primary" type="submit"><br></br>
+				</td>
+			</tr></table>
+		</form>
 
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
@@ -124,8 +172,7 @@
 		</div>
 	</div><!-- end container used for content -->
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>

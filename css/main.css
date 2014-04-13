@@ -6,3 +6,8 @@
 	float: right;
 	padding-right: 15px; /* to match bootstrap container padding */
 	}
+
+#askquestion{
+	text-align: middle;
+	font-size: 200;
+}
