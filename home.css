@@ -120,6 +120,12 @@ padding:10px 10px 10px 10px;
 border:2px;
 }
 
+.faq td, tr
+{
+height:100px;
+width:100px;
+}
+
 p{
 font-size:180%
 }
