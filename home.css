@@ -111,6 +111,11 @@ h1{
 	
 }
 
+th,td
+{
+padding:15px;
+} 
+
 .mentoring td, tr
 {
 border-collapse: collapse;
