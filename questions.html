@@ -77,7 +77,7 @@
             <li class="divider"></li>
           </ul>
         </li>
-		<li><a href="#">Stories</a></li>
+		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -158,16 +158,21 @@
 				<tr><td></td>
 					<td>
 					<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
-					
 				</td>
 			</tr></table>
+			<div class="alert alert-danger alert-dismissible" id="emailAlert">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<p>You checked "send me email updates" but did not enter a valid email address.</p>
+			</div>
 		</form>
 
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
 			<li><a href="#topic" data-toggle="tab">By Topic</a></li>
-			<li><a href="#followed" data-toggle="tab">Followed</a></li>
+			<li><a href="#followed" data-toggle="tab">Followed<span class="badge">2</span></a>
+				
+			</li>
 			<li><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
 			<li><a href="#all" data-toggle="tab">All Questions</a></li>
 		</ul>
@@ -181,7 +186,11 @@
 				<p>by topic here</p>
 			</div>
 			<div class="tab-pane" id="followed">
-				<p>followed here</p>
+				<ul class="list-group">
+					<li class="list-group-item">question1</li>
+					<li class="list-group-item">question2</li>
+					<li class="list-group-item">question3</li>
+				</ul>
 			</div>
 			<div class="tab-pane" id="unanswered">
 				<p>unanswered here</p>
