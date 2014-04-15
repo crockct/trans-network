@@ -116,58 +116,16 @@
 			</div><!-- /pull-right for search -->
 		
 		
-		<!-- Ask a Question -->
-		<form class="row navbar-form" id="askquestion">
-			<h2>Ask a Question</h2>
-			<p>To improve your chances of having your questions answered...</p>
-			<table class="table table-condensed col-md-12">
-				<tr>	
-					<td class="pull-right"><div class="input-group-lg">
-						<text class="table-text">Title</text>
-					</td>
-					<td><input type="text" class="form-control" id="qtitle" maxlength="250" 
-						placeholder="Title" autofocus required></input></div>
-					</td>
-				</tr>
-				<tr>			
-					<td class="pull-right">
-						<text class="table-text">Question</text>
-					<td><textarea class="form-control" id="qcontent" placeholder="Question" required></textarea></td>
-				</tr>
-				<tr>
-					<td width="300px">
-						<text class="table-text pull-right">Send me email updates</text>
-					</td>
-						
-					<td>
-						<div class="input-group">
-							<span class="input-group-addon">
-								<input type="checkbox" id="emailyes">
-							</span>
-							<input type="email" class="form-control" id="emailval">
-						</div><!-- /input-group -->
-					</td>
-				</tr>
-				<tr><td></td>
-					<td>
-					<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
-				</td>
-			</tr></table>
-			<div class="alert alert-danger alert-dismissible" id="emailAlert">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				<p>You checked "send me email updates" but did not enter a valid email address.</p>
-			</div>
-		</form>
+		
 
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
 			<li><a href="#topic" data-toggle="tab">By Topic</a></li>
 			<li><a href="#followed" data-toggle="tab">Followed<span class="badge">2</span></a>
-				
-			</li>
 			<li><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
 			<li><a href="#all" data-toggle="tab">All Questions</a></li>
+			<li><a href="#askq" data-toggle="tab">Ask a question</a></li>
 		</ul>
 		
 		<!-- Tab Pane Contents -- (from http://getbootstrap.com/javascript/#tabs) -->
@@ -191,8 +149,51 @@
 			<div class="tab-pane" id="all">
 				<p>all here</p>
 			</div>
-			
-		</div>
+			<div class="tab-pane" id="askq">
+				<!-- Ask a Question -->
+				<form class="row navbar-form" id="askquestion">
+					<h2>Ask a Question</h2>
+					<p>To improve your chances of having your questions answered...</p>
+					<table class="table table-condensed col-md-12">
+						<tr>	
+							<td class="pull-right"><div class="input-group-lg">
+								<text class="table-text">Title</text>
+							</td>
+							<td><input type="text" class="form-control" id="qtitle" maxlength="250" 
+								placeholder="Title" autofocus required></input></div>
+							</td>
+						</tr>
+						<tr>			
+							<td class="pull-right">
+								<text class="table-text">Question</text>
+							<td><textarea class="form-control" id="qcontent" placeholder="Question" required></textarea></td>
+						</tr>
+						<tr>
+							<td width="300px">
+								<text class="table-text pull-right">Send me email updates</text>
+							</td>
+								
+							<td>
+								<div class="input-group">
+									<span class="input-group-addon">
+										<input type="checkbox" id="emailyes">
+									</span>
+									<input type="email" class="form-control" id="emailval">
+								</div><!-- /input-group -->
+							</td>
+						</tr>
+						<tr><td></td>
+							<td>
+							<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
+						</td>
+						</tr></table>
+						<div class="alert alert-danger alert-dismissible" id="emailAlert">
+							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+							<p>You checked "send me email updates" but did not enter a valid email address.</p>
+						</div>
+				</form>
+			</div><!-- end tab pane div -->
+		</div><!-- end ALL tab content div -->
 	</div><!-- end container used for content -->
 
    
