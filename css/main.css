@@ -7,8 +7,25 @@
 	padding-right: 15px; /* to match bootstrap container padding */
 	}
 
+.pull-right-nopad{
+	float: right;
+	}
+	
 .table-text{ /* used in forms */
 	vertical-align: middle;
 	font-size: 180%;
 	text-align: middle;
+}
+
+.heightchange{ /* used for searchbar */
+	height: 34px;
+}
+
+.p{
+	font-family: georgia;
+}
+
+.p-big{
+	font-size: 180%;
+	font-family: georgia;
 }
