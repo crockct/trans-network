@@ -73,11 +73,11 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-	margin-top: 100px;
+	margin-top: 10px;
 }
 .questions {
     background: none repeat scroll 0 0;
-	top: 400px;
+	top: 200px;
 	left: 200px;
     position: absolute; /* this is so that the text is over the picture */
 	color:#3991CC;
@@ -97,8 +97,8 @@ body{
 
 .mentors {
     background: none repeat scroll 0 0;
-	top: 50px;
-	left: 490px;
+	top: -20px;
+	left: 500px;
     position: absolute; /* this is so that the text is over the picture */
 	color:#3991CC;
 	font-family: helvetica;
