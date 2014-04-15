@@ -20,3 +20,12 @@
 .heightchange{ /* used for searchbar */
 	height: 34px;
 }
+
+.p{
+	font-family: georgia;
+}
+
+.p-big{
+	font-family: georgia;
+	font-size: 180%;
+}

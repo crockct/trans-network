@@ -104,10 +104,9 @@ body{
 	font-family: helvetica;
 	text-align: center
 }
-/*hello*/
-h1{
+
+h1, h2, h3, h4{
 	font-family: georgia;
-	
 }
 
 th,td
@@ -128,10 +127,6 @@ border:2px;
 {
 height:100px;
 width:100px;
-}
-
-p{
-font-size:180%
 }
 
 a:link {color:#FF8C00;}  
