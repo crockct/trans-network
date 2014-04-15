@@ -80,8 +80,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Mentoring</a></li>
-        <li><a href="#questions.html">Questions</a></li>
+        <li><a href="mentoring.html">Mentoring</a></li>
+        <li><a href="questions.html">Questions</a></li>
 		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
       </ul>
@@ -146,14 +146,34 @@
 				<p>by topic here</p>
 			</div>
 			<div class="tab-pane" id="followed">
-				<ul class="list-group">
-					<li class="list-group-item">
-						<h3 class="list-group-item-heading">question title here</h3>
-						<p class="list-group-item-text">answer answer answer answer answer answer</p>
-					</li>
-					<li class="list-group-item">question2</li>
-					<li class="list-group-item">question3</li>
-				</ul>
+				<table class="table" id="followedQuestionsTable">
+					<tr>
+						<td>
+							<input type="checkbox" id="selectq1">
+						</td>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+						</td>
+						<td>
+							<p>Status: Answered</p>
+							<p>Asked: February 1, 2014 by user1</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" id="selectq2">
+						</td>
+						<td>
+							<h3 class="list-group-item-heading">What Bathroom Do I Use?</h3>
+							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+						</td>
+						<td>
+							<p>Status: Unanswered</p>
+							<p>Asked: March 31, 2014 by anonymous</p>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="tab-pane" id="unanswered">
 				<p>unanswered here</p>
@@ -207,6 +227,11 @@
 			</div><!-- end tab pane div -->
 		</div><!-- end ALL tab content div -->
 	</div><!-- end container used for content -->
+	<div id="footer">
+		<div class="container">
+			<p class="text-muted">Copyright 2014.</p>
+		</div>
+	</div>
 
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
