@@ -109,15 +109,19 @@ h1, h2, h3, h4{
 	font-family: georgia;
 }
 
-th,td
+table, th,td
 {
+background-color:white;
 padding:15px;
 } 
+
+
 
 .mentoring td, tr
 {
 border-collapse: collapse;
-
+width:400px;
+height:400px;
 padding:10px 10px 10px 10px;
 border:2px;
 }
