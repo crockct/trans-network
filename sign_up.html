@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans*Network</title>
+	
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css"><!--for different sized screens -->
+	<link rel="stylesheet" type="text/css" href="home.css" />
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+		$(function() {
+	  // Setup drop down menu
+	  $('.dropdown-toggle').dropdown();
+	 
+	  // Fix input element click problem
+	  $('.dropdown input, .dropdown label').click(function(e) {
+		e.stopPropagation();
+	  });
+	});
+	</script>
+  </head>
+  <body>
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="trans_logo" src="img/trans_logo.png"/></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="mentoring.html">Mentoring</a></li>
+		<li><a href="questions.html">Questions</a></li>
+		<li><a href="#">Stories</a></li>
+		<li><a href="#">People</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="/users/sign_up">Sign Up</a></li>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <!-- Login form here -->
+			  <form action="" method="post" accept-charset="UTF-8">
+			  <p> Username </p>
+			  <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
+			  <p> Password </p>
+			  <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+			  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+			  <label class="string optional" for="user_remember_me"> Remember me</label>
+			 
+			  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+			  <p></p>
+			  </form>
+            </div>
+          </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+ <div class="container" style="margin: 10px;">
+      <div class="row"><h2>New Registration</h2>
+  </div>
+ 
+  <form role="form">
+    <div class="form-group">
+      <label for="firstname" class="col-md-2">
+        First Name:
+      </label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="firstname" placeholder="Enter First Name">
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="lastname" class="col-md-2">
+        Last Name:
+      </label>
+      <div class="col-md-10">
+        <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="emailaddress" class="col-md-2">
+        Email address:
+      </label>
+      <div class="col-md-10">
+        <input type="email" class="form-control" id="emailaddress" placeholder="Enter email address">
+        <p class="help-block">
+          Example: yourname@domain.com
+        </p>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="password" class="col-md-2">
+        Password:
+      </label>
+      <div class="col-md-10">
+        <input type="password" class="form-control" id="password" placeholder="Enter Password">
+        <p class="help-block">
+          Min: 6 characters (Alphanumeric only)
+        </p>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="sex" class="col-md-2">
+        Sex:
+      </label>
+      <div class="col-md-10">
+        <label class="radio">
+          <input type="radio" name="sex" id="sex" value="male" checked>
+          Male
+        </label>
+        <label class="radio">
+          <input type="radio" name="sex" id="sex" value="female">
+          Female
+        </label>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="country" class="col-md-2">
+        Country:
+      </label>
+      <div class="col-md-10">
+        <select name="country" id="country" class="form-control">
+          <option>--Please Select--</option>
+          <option>India</option>
+          <option>United States</option>
+          <option>Canada</option>
+          <option>United Kingdom</option>
+          <option>Others</option>
+        </select>
+      </div>
+ 
+ 
+ 
+ 
+    </div>
+ 
+    <div class="form-group">
+      <label for="uploadimage" class="col-md-2">
+        Upload Image:
+      </label>
+      <div class="col-md-10">
+        <input type="file" name="uploadimage" id="uploadimage">
+        <p class="help-block">
+          Allowed formats: jpeg, jpg, gif, png
+        </p>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="checkbox">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-10">
+        <label>
+          <input type="checkbox">Terms and Conditions</label>
+      </div>
+ 
+ 
+    </div>
+ 
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-10">
+        <button type="submit" class="btn btn-info">
+          Register
+        </button>
+      </div>
+    </div>
+  </form>
+  </div>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
