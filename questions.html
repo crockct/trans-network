@@ -104,20 +104,18 @@
 			<h1>Questions</h1>
 			
 			<!-- Search -->
-			<div class="pull-right col-lg-2 navbar-form">
+			<!-- <div class="pull-right col-lg-2 navbar-form"> -->
 				<div class="input-group">
-					<input type="text" class="input-control" placeholder="Search Questions">
+					<input type="text" class="input-control pull-right" placeholder="Search Questions">
 						<span class="input-group-btn">
 						<button type="button" class="btn btn-default"> 
 							<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
 						</button>
 					</span>
 				</div><!-- /input-group -->
-			</div><!-- /pull-right for search -->
+			<!-- </div><!-- /pull-right for search -->
 		
 		
-		
-
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
@@ -131,6 +129,7 @@
 		<!-- Tab Pane Contents -- (from http://getbootstrap.com/javascript/#tabs) -->
 		<div class="tab-content">
 			<div class="tab-pane active" id="hot">
+				<p> <br> <center> <font size="25">Top 10 Most Popular Answers </font></center> <br>
 				<p>hot answers here</p>
 			</div>
 			<div class="tab-pane" id="topic">
@@ -138,7 +137,10 @@
 			</div>
 			<div class="tab-pane" id="followed">
 				<ul class="list-group">
-					<li class="list-group-item">question1</li>
+					<li class="list-group-item">
+						<h3 class="list-group-item-heading">question title here</h3>
+						<p class="list-group-item-text">answer answer answer answer answer answer</p>
+					</li>
 					<li class="list-group-item">question2</li>
 					<li class="list-group-item">question3</li>
 				</ul>
