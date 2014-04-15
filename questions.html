@@ -39,15 +39,27 @@
 		*/
 		
 		$("#submitq").click(function(evt) {
+			evt.preventDefault();
 			var emailInput = document.getElementById("emailval");
 			var sendEmail = document.getElementById("emailyes");
 			if (sendEmail.checked) {
 				var email = emailInput.value;
 				if (email == ""){
-					//TODO notify user that email is blank but email me is checked. 
+					$("#emailAlert").show();
+				}
+				else {
+				// go to followed questions tab
 				}
 			}
+			else {
+				// go to followed questions tab
+			}
 		});
+		
+		$("#emailAlertClose").click(function(evt) {
+			$("#emailAlert").hide();
+		});
+
 	});
 	</script>
   </head>
@@ -187,8 +199,8 @@
 							<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
 						</td>
 						</tr></table>
-						<div class="alert alert-danger alert-dismissible" id="emailAlert">
-							<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<div class="alert alert-danger alert-dismissible" hidden="true" id="emailAlert">
+							<button type="button" class="close" id="emailAlertClose" aria-hidden="true">&times;</button>
 							<p>You checked "send me email updates" but did not enter a valid email address.</p>
 						</div>
 				</form>
@@ -200,4 +212,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
+  <!-- Sources: 
+	bootstrap components page
+	http://stackoverflow.com/questions/17357630
+	-->
 </html>
