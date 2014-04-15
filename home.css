@@ -120,7 +120,8 @@ padding:15px;
 .mentoring td, tr
 {
 border-collapse: collapse;
-
+width:400px;
+height:400px;
 padding:10px 10px 10px 10px;
 border:2px;
 }
