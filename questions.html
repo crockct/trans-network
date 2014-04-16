@@ -48,11 +48,15 @@
 					$("#emailAlert").show();
 				}
 				else {
-				// go to followed questions tab
+				// go to followed questions tab (id=followed)
+				$("#followed").tab("show");
 				}
 			}
 			else {
-				// go to followed questions tab
+				// go to followed questions tab. all tabs in div with id=tab-content
+				var tabsObject = $("#tab-content").tab();
+				console.log(tabsObject);
+				console.log("trying to change tabs");
 			}
 		});
 		
@@ -199,7 +203,7 @@
 						<tr>			
 							<td class="pull-right">
 								<text class="table-text">Question</text>
-							<td><textarea class="form-control" id="qcontent" placeholder="Question" required></textarea></td>
+							<td><textarea class="form-control" id="qcontent" rows="3" placeholder="Question" required></textarea></td>
 						</tr>
 						<tr>
 							<td width="300px">
@@ -240,6 +244,7 @@
   </body>
   <!-- Sources: 
 	bootstrap components page
+	bootstrap javascript page
 	http://stackoverflow.com/questions/17357630
 	-->
 </html>
