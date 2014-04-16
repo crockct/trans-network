@@ -12,7 +12,7 @@
 	
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
+	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,6 +20,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script>
+	 {
+   var referrer =  $(document).getElementById("name");;
+   console.log(referrer);
+		});
 		$(function() {
 	  // Setup drop down menu
 	  $('.dropdown-toggle').dropdown();
@@ -42,15 +46,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img class="trans_logo" src="img/trans_logo.png"/></a>
+      <a class="navbar-brand" href="index.html"><img class="trans_logo" src="img/trans_logo.png"/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">Mentoring</a></li>
-		<li><a href="#">Questions</a></li>
-		<li><a href="#">Stories</a></li>
+        <li><a href="requestbecome.html">Mentoring</a></li>
+		<li><a href="questions.html">Questions</a></li>
+		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
       </ul>
 	  
@@ -82,69 +86,149 @@
 <div class="container">
 	
 
-	<h1 style=" width:600px;"> Mentoring </h1> 
+	<h1> Mentoring </h1> 
 	
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#default" data-toggle="tab">Mentees</a></li>
+			<li class="active"><a href="#default" data-toggle="tab">Home</a></li>
 			<li><a href="#request1"  data-toggle="tab">Request a mentor</a></li>
 			<li><a href="#become1" data-toggle="tab">Become a mentor</a></li>
+			<li><a href="#faq1" data-toggle="tab">Become a mentor FAQ</a></li>
 		</ul>
 		
 	<div class="tab-content">
 		<div class="tab-pane active" id="default">
+			<table  style="height:700px; width:700px">
+				<tr >
+					<td > 
+						<h3> List of all mentees </h3>
+						<table class="mentees"  border="1" >
+						<tr><td> alisa </td>
+						<td> message</td> </tr>
+						<tr><td> ben</td> 
+						<td> message </td> </tr>
+						<tr><td> jim</td> 
+						<td> message </td> </tr>
+						<tr><td> julia</td> 
+						<td> message </td> </tr>
+						
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td> <h3> Would you like to have another mentee? </h3>
+						<input class="btn btn-primary" type="button" style="width: 370px; height:50px"; value="Request a mentee"> </button>
+						<br>
+						<br>
+						<text>  If you are confused still and want to know more about the mentoring <a href="FAQ page.html"> <link> FAQ </link> </text></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h3>Would you like to request a mentor? </h3>
+						<a href="request.html"> 
+						<input class="btn btn-primary" type="button" style="width:370px; height:50px"; value="Request a mentor"> </input>
 		
-	<table  style="height:570px; width:700px">
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+	<div class="tab-pane" id="request1">
+		<table style="height:600px; width:700px">
+			<tr>
+				<td> <h3> Match me with someone who identifies as: </h3>
+				<div class="col-md-10">
+					<label class="radio"> 
+						<input id="gender" type="radio" checked="" value="transman" name="gender"></input>Transman</label>
+						
+						<label class="radio">
+						<input id="gender" type="radio" value="transwoman" name="gender"></input>Transwoman</label>
+						Other <input type="input" value=""> </input>
+						</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3> Message to potential mentor </h3>
+					<textarea class="form-control" id="qcontent" placeholder="Message" required></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<h3> Anything else you want to share? </h3><br>
+					<input class="btn btn-primary" value="Request a mentor"> </input>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div class="tab-pane" id="become1">
+	<table  style="width:700px">
+	<tr><td>
+	<h3>
+	Select one or more potential mentees </h3>
+	<table>
 	<tr>
-	<td> 
-	<h3> You are a mentor :) Here are your mentees </h3>
-	<text style="color:orange"> Put some more info </text>
+	<td>
+	<input type="checkbox"> </input>
+	</td>
+	<td>
+	<h3> Message of alisa</h3>
+	<p> I am a transwoman and I like spending time figuring out how to help the community. I am willing to spend much of my free time 
+to help others but first I am very much willing to learn from someone who has done community service </p>
+	</td>
+	<td> alisa </td> </tr>
+	<table>
+	<tr>
+	<td>
+	<input type="checkbox"> </input>
+	</td>
+	<td>
+	<h3> Message of jim</h3>
+	<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to realize
+that the community here is larger than in most places in Europe. I am looking for someone to talk to and discuss how the community here is.	</p>
+	</td>
+	<td> jim </td> </tr>
+	</table>
+	</td></tr>
+	<tr> <td> <input class="btn btn-primary" value="Request mentees"></input> </td></tr> 
+	</table>
+	</div>
+	
+	<div class="tab-pane" id="faq1">
+	
+	<table class="faq" style=" height:650px; width:700px">
+	<tr>
+	<td> <h1 style="width:600px;"> Trans*Network Mentor FAQ </h1><h3> What is a mentor? </h3>
+	<text> Mentor is someone that is there to support you and answer your questions when you have some.
+			To be a mentor is a very rewarding experience as you get to teach people and advice
+			them on some specific hard periods of the transition. </text>
 	</td>
 	</tr>
 	<tr>
-	<td> <h3> Want to request another mentee? </h3>
-	<input class="btn btn-primary" type="button" style="width: 370px; height:50px"; value="Request a mentee"> </button>
-	<br>
-	<br>
-	<text>  If you are confused still and want to know more about the mentoring <a href="FAQ page.html"> <link> FAQ </link> </text></td>
-	</td>
+	<td> <h3>Why should I mentor? </h3>
+	<text> You should be a mentor because this is a chance to give back to the community.
+		It is alsmost for sure that you were helped by someone or many individual transgender people
+		when you were going through your own transition. Now, as a person who found who they are
+		and how to deal with situations, advice some people who are just begining the transition.</text></td>
+	</tr>
+	<tr>
+	<td> <h3> What can I do as a mentor? </h3>
+	<text> As a mentor you get to personal messages to your mentees when you want to 
+gice them advice or answer their questions. You get to be the source of information for them which
+is sometimes more importnat then the information they find on the internet. As such, your task is important
+but also very rewarding.	</text></td>
 	</tr>
 	<tr>
 	<td>
-	<h3>Would you like to request a mentor ? </h3>
-	<a href="request.html"> 
-	<input class="btn btn-primary" type="button" style="width:370px; height:50px"; value="Request a mentor">  </input>
-	</td>
+	<h3 style="margin-left:300px"> Think you are ready? </h3>
+	<input class="btn btn-primary" value="Become a mentor" type=" button" style="margin-left:300px"> </input</td>
 	</tr>
 	</table>
 	</div>
 	
-	<div class="tab-pane active" id="request1">
-	<table style="height:600px; width:700px">
-	<tr>
-	<td> <h3> Match me with someone who identifies as: </h3>
-	<form> 
-	<input type="radio" value="transman">Transman <br>
-	<input type="radio" value="transwoman"> Transwoman <br>
-	Other <input type="input" value="other">  </form>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<h3> Message to potential mentor </h3>
-	<textarea class="form-control" id="qcontent" placeholder="Message" required></textarea>
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<h3> Anything else you want to share? </h3><br>
-	<button style="color: blue"> Request a mentor </button>
-	</td>
-	</tr>
-	</table>
-	</div>
-	
-	</div>
-	</div>
+</div>
+</div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

@@ -48,11 +48,15 @@
 					$("#emailAlert").show();
 				}
 				else {
-				// go to followed questions tab
+				// go to followed questions tab (id=followed)
+				$("#followed").tab("show");
 				}
 			}
 			else {
-				// go to followed questions tab
+				// go to followed questions tab. all tabs in div with id=tab-content
+				var tabsObject = $("#tab-content").tab();
+				console.log(tabsObject);
+				console.log("trying to change tabs");
 			}
 		});
 		
@@ -141,7 +145,34 @@
 			<div class="tab-pane active" id="hot">
 				<br></br>
 				<p class="p-big">Top 10 Most Popular Answers</p> 
-				<p>hot answers here</p>
+				<table class="table" id="hotAnswersTable">
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+						</td>
+						<td>
+							<p>Asked: February 1, 2014 by user1</p>
+							<p>30 Likes
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: some_topic <a href="#">Add</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">some other question</h3>
+							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+						</td>
+						<td>
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>29 Likes 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: topic1, topic2 <a href="#">Add</a></p>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="tab-pane" id="topic">
 				<p>by topic here</p>
@@ -157,8 +188,8 @@
 							<p class="list-group-item-text">answer answer answer answer answer answer</p>
 						</td>
 						<td>
-							<p>Status: Answered</p>
 							<p>Asked: February 1, 2014 by user1</p>
+							<p>Status: Answered</p>
 						</td>
 					</tr>
 					<tr>
@@ -170,14 +201,48 @@
 							<p class="list-group-item-text">answer answer answer answer answer answer</p>
 						</td>
 						<td>
-							<p>Status: Unanswered</p>
 							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>Status: Unanswered</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="tab-pane" id="unanswered">
-				<p>unanswered here</p>
+				<table class="table" id="unansweredQuestionsTable">
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">full question text</p>
+						</td>
+						<td>
+							<p>Asked: February 1, 2014 by user1</p>
+							<p>30 Likes
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: <a href="#">Add</a></p>
+							<p><a href="#answer">Answer this question</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">full question text</p>
+						</td>
+						<td>
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>29 Likes 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: <a href="#">Add</a></p>
+							<p><a href="#answer">Answer this question</a></p>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="tab-pane" id="all">
 				<p>all here</p>
@@ -199,7 +264,7 @@
 						<tr>			
 							<td class="pull-right">
 								<text class="table-text">Question</text>
-							<td><textarea class="form-control" id="qcontent" placeholder="Question" required></textarea></td>
+							<td><textarea class="form-control" id="qcontent" rows="3" placeholder="Question" required></textarea></td>
 						</tr>
 						<tr>
 							<td width="300px">
@@ -217,8 +282,8 @@
 						</tr>
 						<tr><td></td>
 							<td>
-							<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
-						</td>
+								<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
+							</td>
 						</tr></table>
 						<div class="alert alert-danger alert-dismissible" hidden="true" id="emailAlert">
 							<button type="button" class="close" id="emailAlertClose" aria-hidden="true">&times;</button>
@@ -240,6 +305,7 @@
   </body>
   <!-- Sources: 
 	bootstrap components page
+	bootstrap javascript page
 	http://stackoverflow.com/questions/17357630
 	-->
 </html>

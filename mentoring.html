@@ -30,6 +30,13 @@
 		e.stopPropagation();
 	  });
 	});
+	
+	var setData=function()
+	{
+	console.log("hello");
+	$('#vari').data('name', 'become');
+	console.log($('#vari').get('name'));
+	};
 	</script>
   </head>
   <body>
@@ -49,7 +56,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="mentoring.html">Mentoring</a></li>
+        <li><a href="mentoring.html" onclick="setData()">Mentoring</a></li>
 		<li><a href="questions.html">Questions</a></li>
 		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
