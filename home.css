@@ -140,5 +140,12 @@ height:100px;
 width:100px;
 }
 
+#loginsuccess{
+	display: none;
+	top: 0px;
+	left: 1700px;
+    position: absolute; 
+}
+
 a:link {color:#fe548f;}  
 a:visited {color:#fe548f;}  
