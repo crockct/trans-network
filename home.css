@@ -107,8 +107,15 @@ body{
 	text-align: center
 }
 
-h1, h2, h3, h4{
+h2, h3, h4{
+
 	font-family: georgia;
+}
+
+h1
+{
+font-family: georgia;
+text-align: center;
 }
 
 table, th,td
@@ -117,8 +124,6 @@ background-color:white;
 padding:15px;
 font-family: georgia;
 } 
-
-
 
 .mentoring td, tr
 {
