@@ -118,6 +118,15 @@ font-family: georgia;
 text-align: center;
 }
 
+.mentees  td, tr{
+width:300px;
+height:10px;
+padding:0px 0px 0px 10px
+}
+.mentees tr{
+width:300px;
+}
+
 table, th,td
 {
 background-color:white;
