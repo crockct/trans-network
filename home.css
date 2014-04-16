@@ -118,6 +118,13 @@ font-family: georgia;
 text-align: center;
 }
 
+table, th,td
+{
+background-color:white;
+padding:30px;
+font-family: georgia;
+} 
+
 
 .mentoring td, tr
 {
