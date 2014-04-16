@@ -145,7 +145,7 @@
 			<div class="tab-pane active" id="hot">
 				<br></br>
 				<p class="p-big">Top 10 Most Popular Answers</p> 
-				<table class="table" id="followedQuestionsTable">
+				<table class="table" id="hotAnswersTable">
 					<tr>
 						<td>
 							<h3 class="list-group-item-heading">question title here</h3>
@@ -156,6 +156,7 @@
 							<p>30 Likes
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</p>
+							<p>Topics: some_topic</p>
 						</td>
 					</tr>
 					<tr>
@@ -168,6 +169,7 @@
 							<p>29 Likes 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</p>
+							<p>Topics: topic1, topic2</p>
 						</td>
 					</tr>
 				</table>
@@ -203,10 +205,44 @@
 							<p>Status: Unanswered</p>
 						</td>
 					</tr>
+					<tr>
+						<td>
+							<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
+						</td>
+					</tr>
 				</table>
 			</div>
 			<div class="tab-pane" id="unanswered">
-				<p>unanswered here</p>
+				<table class="table" id="unansweredQuestionsTable">
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">full question text</p>
+						</td>
+						<td>
+							<p>Asked: February 1, 2014 by user1</p>
+							<p>30 Likes
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: </p>
+							<p><a href="#answer">Answer this question</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">question title here</h3>
+							<p class="list-group-item-text">full question text</p>
+						</td>
+						<td>
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>29 Likes 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</p>
+							<p>Topics: </p>
+							<p><a href="#answer">Answer this question</a></p>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="tab-pane" id="all">
 				<p>all here</p>
@@ -246,8 +282,8 @@
 						</tr>
 						<tr><td></td>
 							<td>
-							<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
-						</td>
+								<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
+							</td>
 						</tr></table>
 						<div class="alert alert-danger alert-dismissible" hidden="true" id="emailAlert">
 							<button type="button" class="close" id="emailAlertClose" aria-hidden="true">&times;</button>
