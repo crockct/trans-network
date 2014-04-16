@@ -80,17 +80,15 @@ body{
 	top: 200px;
 	left: 200px;
     position: absolute; /* this is so that the text is over the picture */
-	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
 }
 
 .stories {
     background: none repeat scroll 0 0;
-	top: 400px;
+	top: 200px;
 	left: 775px;
     position: absolute; /* this is so that the text is over the picture */
-	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
 }
@@ -100,7 +98,6 @@ body{
 	top: -20px;
 	left: 500px;
     position: absolute; /* this is so that the text is over the picture */
-	color:#3991CC;
 	font-family: helvetica;
 	text-align: center
 }
@@ -134,3 +131,4 @@ width:100px;
 }
 
 a:link {color:#fe548f;}  
+a:visited {color:#fe548f;}  
