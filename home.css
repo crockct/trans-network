@@ -146,6 +146,9 @@ padding:10px 10px 10px 10px;
 border:2px;
 }
 
+i.glyphicon-envelope {
+    font-size: 4em;
+}
 .faq td, tr
 {
 height:100px;
