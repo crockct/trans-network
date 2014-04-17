@@ -118,13 +118,15 @@ font-family: georgia;
 text-align: center;
 }
 
-.mentees  td, tr{
+.mentees  tr{
 width:300px;
-height:10px;
-padding:0px 0px 0px 10px
+height:1px;
+padding:0px 0px 0px 10px;
+white-space:nowrap;
 }
-.mentees tr{
-width:300px;
+.mentees td{
+padding:10px;
+font-size:120%
 }
 
 table, th,td
