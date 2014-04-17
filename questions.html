@@ -132,7 +132,7 @@
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
 			<li><a href="#topic" data-toggle="tab">By Topic</a></li>
-			<li><a href="#followed" data-toggle="tab">Followed<span class="badge">2</span></a>
+			<li><a href="#followed" data-toggle="tab">Followed<span class="badge pull-right">2</span></a>
 			<li><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
 			<li><a href="#all" data-toggle="tab">All Questions</a></li>
 			<li><a href="#askq" data-toggle="tab">Ask a question</a></li>
@@ -213,20 +213,23 @@
 							<input type="checkbox" id="selectq2">
 						</td>
 						<td>
-							<h3 class="list-group-item-heading">What Bathroom Do I Use?</h3>
-							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+							<h3 class="list-group-item-heading">I think my partner might be trans*</h3>
+							<p class="list-group-item-text">I think my partner is questioning his gender identity. 
+							He is maab and has been talking a lot about how he doesn't feel comfortable with male gender 
+							roles, and seems to have some body dysphoria. He is struggling with not conforming to gender
+							roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't 
+							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
+							obviously I don't want to push him on this. How can I be most supportive?</p>
+							<br>
+							<p>Topics: significant others</p>
 						</td>
 						<td>
 							<p>Asked: March 31, 2014 by anonymous</p>
 							<p>Status: Unanswered</p>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
-						</td>
-					</tr>
 				</table>
+				<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
 			</div>
 			<div class="tab-pane" id="unanswered">
 			<br><h1> Unanswered Questions</h1>
@@ -348,11 +351,8 @@
 								</div><!-- /input-group -->
 							</td>
 						</tr>
-						<tr><td></td>
-							<td>
-								<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
-							</td>
-						</tr></table>
+						</table>
+						<button class="btn btn-primary btn-lg" type="submit" id="submitq">Submit my question</button>
 						<div class="alert alert-danger alert-dismissible" hidden="true" id="emailAlert">
 							<button type="button" class="close" id="emailAlertClose" aria-hidden="true">&times;</button>
 							<p>You checked "send me email updates" but did not enter a valid email address.</p>
@@ -375,6 +375,6 @@
 	bootstrap components page
 	bootstrap javascript page
 	http://stackoverflow.com/questions/17357630
-	question content from http://tranifesto.com/transgender-faqs-and-info/transgender-faq/
+	question content from http://tranifesto.com/transgender-faqs-and-info/transgender-faq/ and everyoneisgay.com
 	-->
 </html>
