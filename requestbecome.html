@@ -20,11 +20,11 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<script>
-	 {
-   var referrer =  $(document).getElementById("name");;
+	/* {
+   var referrer =  $(document).getElementById("name");
    console.log(referrer);
-		});
-		$(function() {
+		};*/
+	/*	$(function() {
 	  // Setup drop down menu
 	  $('.dropdown-toggle').dropdown();
 	 
@@ -32,12 +32,14 @@
 	  $('.dropdown input, .dropdown label').click(function(e) {
 		e.stopPropagation();
 	  });
+	});*/
+	$(function(){
+		$("#envelope").on('click', function(e){
+			e.preventDefault();
+			myWindow = window.open("new_message.html","","width=1000,height=800"); 
+		});
 	});
-	
-	function openWin()
-	{
-	myWindow = window.open("","","width=100,height=100"); // Opens a new window
-	}
+
 	</script>
   </head>
   <body>
@@ -108,13 +110,13 @@
 						<h3> List of all mentees </h3>
 						<table class="mentees"  border="1" >
 						<tr t><td> alisa </td>
-						<td> <i class="glyphicon glyphicon-envelope"></i></td> </tr>
+						<td> <button class="btn btn-primary" id="envelope"><i class="glyphicon glyphicon-envelope" ></i></button></td> </tr>
 						<tr><td> ben</td> 
-						<td><i class="glyphicon glyphicon-envelope"></i></td> </tr>
+						<td> <button class="btn btn-primary" id="envelope"><i class="glyphicon glyphicon-envelope" ></i></button></td> </tr>
 						<tr><td> jim</td> 
-						<td><i class="glyphicon glyphicon-envelope"></i></td> </tr>
+						<td> <button class="btn btn-primary" id="envelope"><i class="glyphicon glyphicon-envelope" ></i></button></td> </tr>
 						<tr><td> julia</td> 
-						<td><i class="glyphicon glyphicon-envelope"></i></td> </tr>						
+						<td> <button class="btn btn-primary" id="envelope"><i class="glyphicon glyphicon-envelope" ></i></button></td> </tr>					
 						</table>
 					</td>
 				</tr>
