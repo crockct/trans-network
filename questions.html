@@ -132,7 +132,7 @@
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
 			<li><a href="#topic" data-toggle="tab">By Topic</a></li>
-			<li><a href="#followed" data-toggle="tab">Followed<span class="badge pull-right">2</span></a>
+			<li><a href="#followed" data-toggle="tab">Followed&nbsp;<span class="badge">2</span></a>
 			<li><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
 			<li><a href="#all" data-toggle="tab">All Questions</a></li>
 			<li><a href="#askq" data-toggle="tab">Ask a question</a></li>
@@ -143,7 +143,7 @@
 			<div class="tab-pane active" id="hot">
 				<br>
 				<h1>Most Popular Answers</h1> <br>
-				<table class="table" id="hotAnswersTable">
+				<table class="table" align="center" id="hotAnswersTable">
 					<tr>
 						<td>
 							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
@@ -155,11 +155,12 @@
 							due to the potential for suicide. This sex/gender incongruity has been determined by many 
 							professional organizations and courts to be a medical condition.</p>
 							<br>
-							<p>Topics: sex and gender, trans* basics <a href="#">Add</a></p>
+							<text>Topics: Sex and gender, trans* basics <a href="#"> edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
-						<td>
+						<td style="width:200px">
 							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
-							<p>30 Likes
+							<p align="center">30 Likes
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</button>
@@ -176,11 +177,64 @@
 							not to put too much importance on labels such as gay, lesbian, and straight. In many ways, trans 
 							people confound the ''simple'' expectations of sexual orientation that go with such labels.</p>
 							<br>
-							<p>Topics: sexual orientation, trans* basics <a href="#">Add</a></p>
+							<text>Topics: sexual orientation, trans* basics <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
-						<td>
+						<td style="width:200px">
 							<p>Asked: March 31, 2014 by anonymous</p>
-							<p>29 Likes 
+							<p align="center">29 Likes 
+							<button type="button" class="btn btn-default"> 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</button>
+							</p>
+						</td>
+					</tr>
+				</table>
+				<br></br>
+			</div>
+			<div class="tab-pane" id="topic">
+				<br><h1>Topics</h1>
+				<h2>Trans* Basics</h2>
+				<table class="table" align="center" id="hotAnswersTable">
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
+							<p class="list-group-item-text">Sex is strictly biological - the physical body - while gender 
+							encompasses biological, cognitive, and social aspects of a human being, including identity, 
+							expression, and the expectations of others. Because gender and sex are not the same thing, 
+							it is possible for a person's sex and gender to disagree. When this happens, it can be extremely 
+							problematic for the person dealing with this incongruity, and it can often be life-threatening, 
+							due to the potential for suicide. This sex/gender incongruity has been determined by many 
+							professional organizations and courts to be a medical condition.</p>
+							<br>
+							<text>Topics: Sex and gender, trans* basics <a href="#"> edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
+						</td>
+						<td style="width:200px">
+							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
+							<p align="center">30 Likes
+							<button type="button" class="btn btn-default"> 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">Does being transgender mean I'm gay?</h3>
+							<p class="list-group-item-text">Gender identity and sexual orientation are different concepts in 
+							Western culture. Sexual orientation refers to a person's attractions. Gender identity refers to who 
+							a person believes him- or herself to be. Transgender and transsexual people can have any sexual 
+							orientation. It is also possible for sexual attraction to change after transition. It is better 
+							not to put too much importance on labels such as gay, lesbian, and straight. In many ways, trans 
+							people confound the ''simple'' expectations of sexual orientation that go with such labels.</p>
+							<br>
+							<text>Topics: sexual orientation, trans* basics <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
+						</td>
+						<td style="width:200px">
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p align="center">29 Likes 
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</button>
@@ -189,12 +243,9 @@
 					</tr>
 				</table>
 			</div>
-			<div class="tab-pane" id="topic">
-				<br><h1>Topics</h1><br>
-			</div>
 			<div class="tab-pane" id="followed">
 			<br><h1>Followed Questions </h1><br>
-				<table class="table" id="followedQuestionsTable">
+				<table class="table" align="center" id="followedQuestionsTable">
 					<tr>
 						<td>
 							<input type="checkbox" id="selectq1">
@@ -202,9 +253,12 @@
 						<td>
 							<h3 class="list-group-item-heading">question title here</h3>
 							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+							<br>
+							<text>Topics: <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
-						<td>
-							<p>Asked: February 1, 2014 by user1</p>
+						<td style="width:200px">
+							<p>Asked: February 1, 2014 by <a href="#">user1</a></p>
 							<p>Status: Answered</p>
 						</td>
 					</tr>
@@ -221,9 +275,10 @@
 							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
 							obviously I don't want to push him on this. How can I be most supportive?</p>
 							<br>
-							<p>Topics: significant others</p>
+							<text>Topics: significant others <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Answer</a></text>
 						</td>
-						<td>
+						<td style="width:200px">
 							<p>Asked: March 31, 2014 by anonymous</p>
 							<p>Status: Unanswered</p>
 						</td>
@@ -233,46 +288,51 @@
 			</div>
 			<div class="tab-pane" id="unanswered">
 			<br><h1> Unanswered Questions</h1>
-				<table class="table" id="unansweredQuestionsTable">
+				<table class="table" align="center" id="unansweredQuestionsTable">
 					<tr>
 						<td>
 							<h3 class="list-group-item-heading">question title here</h3>
 							<p class="list-group-item-text">full question text</p>
 							<br>
-							<p>Topics: <a href="#">Add</a></p>
+							<text>Topics: <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Answer</a></text>
 						</td>
-						<td>
-							<p>Asked: February 1, 2014 by user1</p>
-							<p>50 Followers
+						<td style="width:200px">
+							<p>Asked: February 1, 2014 by <a href="#">user1</a></p>
+							<p align="center">50 Followers
 								<button class="btn btn-default">
 								<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
 								</button>
 							</p>
-							<p><a href="#answer">Answer this question</a></p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="list-group-item-heading">question title here</h3>
-							<p class="list-group-item-text">full question text</p>
+							<h3 class="list-group-item-heading">I think my partner might be trans*</h3>
+							<p class="list-group-item-text">I think my partner is questioning his gender identity. 
+							He is maab and has been talking a lot about how he doesn't feel comfortable with male gender 
+							roles, and seems to have some body dysphoria. He is struggling with not conforming to gender
+							roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't 
+							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
+							obviously I don't want to push him on this. How can I be most supportive?</p>
 							<br>
-							<p>Topics: <a href="#">Add</a></p>
+							<text>Topics: significant others <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Answer</a></text>
 						</td>
-						<td>
+						<td style="width:200px">
 							<p>Asked: March 31, 2014 by anonymous</p>
-							<p>29 Followers
+							<p align="center">29 Followers
 								<button class="btn btn-default">
 									<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
 								</button>
 							</p>
-							<p><a href="#answer">Answer this question</a></p>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div class="tab-pane" id="all">
 			<br>	<h1>All Questions</h1><br>
-			<table class="table" id="hotAnswersTable">
+			<table class="table" align="center" id="allQuestionsTable">
 					<tr>
 						<td>
 							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
@@ -284,11 +344,12 @@
 							due to the potential for suicide. This sex/gender incongruity has been determined by many 
 							professional organizations and courts to be a medical condition.</p>
 							<br>
-							<p>Topics: sex and gender, trans* basics <a href="#">Add</a></p>
+							<text>Topics: sex and gender, trans* basics <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
-						<td>
+						<td style="width:200px">
 							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
-							<p>30 Likes
+							<p align="center">30 Likes
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</button>
@@ -305,13 +366,36 @@
 							not to put too much importance on labels such as gay, lesbian, and straight. In many ways, trans 
 							people confound the ''simple'' expectations of sexual orientation that go with such labels.</p>
 							<br>
-							<p>Topics: sexual orientation, trans* basics <a href="#">Add</a></p>
+							<text>Topics: sexual orientation, trans* basics <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
 						<td>
 							<p>Asked: March 31, 2014 by anonymous</p>
-							<p>29 Likes 
+							<p align="center">29 Likes 
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">I think my partner might be trans*</h3>
+							<p class="list-group-item-text">I think my partner is questioning his gender identity. 
+							He is maab and has been talking a lot about how he doesn't feel comfortable with male gender 
+							roles, and seems to have some body dysphoria. He is struggling with not conforming to gender
+							roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't 
+							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
+							obviously I don't want to push him on this. How can I be most supportive?</p>
+							<br>
+							<text>Topics: significant others <a href="#">edit</a></text>
+							<text class="pull-right"><a href="#">Answer</a></text>
+						</td>
+						<td>
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p align="center">50 Followers
+							<button class="btn btn-default" disabled>
+								<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
 							</button>
 							</p>
 						</td>
@@ -335,7 +419,7 @@
 						<tr>			
 							<td class="pull-right">
 								<text class="table-text">Question</text>
-							<td><textarea class="form-control" id="qcontent" rows="3" placeholder="Question" required></textarea></td>
+							<td><textarea class="form-control" id="qcontent" rows="3" style="width=900px" placeholder="Question" required></textarea></td>
 						</tr>
 						<tr>
 							<td width="300px">
@@ -363,7 +447,7 @@
 	</div><!-- end container used for content -->
 	<div class="navbar navbar-fixed-bottom" id="footer">
 		<div class="container">
-			<p class="text-muted">Copyright 2014</p>
+			<small class="text-muted">Copyright 2014</small>
 		</div>
 	</div>
 
