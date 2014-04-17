@@ -83,7 +83,7 @@ body{
 .questions {
     background: none repeat scroll 0 0;
 	top: 200px;
-	left: 200px;
+	left: 220px;
     position: absolute; /* this is so that the text is over the picture */
 	font-family: helvetica;
 	text-align: center
@@ -92,7 +92,7 @@ body{
 .stories {
     background: none repeat scroll 0 0;
 	top: 200px;
-	left: 775px;
+	left: 790px;
     position: absolute; /* this is so that the text is over the picture */
 	font-family: helvetica;
 	text-align: center
@@ -101,7 +101,7 @@ body{
 .mentors {
     background: none repeat scroll 0 0;
 	top: -20px;
-	left: 490px;
+	left: 500px;
     position: absolute; /* this is so that the text is over the picture */
 	font-family: helvetica;
 	text-align: center
