@@ -84,7 +84,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="mentoring.html">Mentoring</a></li>
+        <li><a href="requestbecome.html">Mentoring</a></li>
         <li><a href="questions.html">Questions</a></li>
 		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
@@ -116,19 +116,18 @@
 
 
 	<div class="container">
-		
+		<h1>Questions</h1>
 			
-			<!-- Search -->
-			<div class="input-group col-lg-2 pull-right">
-				<input type="text" height="34px" class="input-control pull-right-nopad heightchange"  placeholder="Search Questions">
-					<span class="input-group-btn">
-					<button type="button" class="btn btn-default"> 
-						<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
-					</button>
-				</span>
-			</div><!-- /input-group -->
+		<!-- Search -->
+		<div class="input-group col-lg-2 pull-right">
+			<input type="text" height="34px" class="input-control pull-right-nopad heightchange"  placeholder="Search Questions">
+				<span class="input-group-btn">
+				<button type="button" class="btn btn-default"> 
+					<span class="glyphicon glyphicon-search"></span><!-- from http://glyphicons.com/ -->
+				</button>
+			</span>
+		</div><!-- /input-group -->
 			
-		<br></br>	
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
@@ -147,23 +146,37 @@
 				<table class="table" id="hotAnswersTable">
 					<tr>
 						<td>
-							<h3 class="list-group-item-heading">question title here</h3>
-							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
+							<p class="list-group-item-text">Sex is strictly biological - the physical body - while gender 
+							encompasses biological, cognitive, and social aspects of a human being, including identity, 
+							expression, and the expectations of others. Because gender and sex are not the same thing, 
+							it is possible for a person's sex and gender to disagree. When this happens, it can be extremely 
+							problematic for the person dealing with this incongruity, and it can often be life-threatening, 
+							due to the potential for suicide. This sex/gender incongruity has been determined by many 
+							professional organizations and courts to be a medical condition.</p>
+							<br>
+							<p>Topics: sex and gender, trans* basics <a href="#">Add</a></p>
 						</td>
 						<td>
-							<p>Asked: February 1, 2014 by user1</p>
+							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
 							<p>30 Likes
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</button>
 							</p>
-							<p>Topics: some_topic <a href="#">Add</a></p>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<h3 class="list-group-item-heading">some other question</h3>
-							<p class="list-group-item-text">answer answer answer answer answer answer</p>
+							<h3 class="list-group-item-heading">Does being transgender mean I'm gay?</h3>
+							<p class="list-group-item-text">Gender identity and sexual orientation are different concepts in 
+							Western culture. Sexual orientation refers to a person's attractions. Gender identity refers to who 
+							a person believes him- or herself to be. Transgender and transsexual people can have any sexual 
+							orientation. It is also possible for sexual attraction to change after transition. It is better 
+							not to put too much importance on labels such as gay, lesbian, and straight. In many ways, trans 
+							people confound the ''simple'' expectations of sexual orientation that go with such labels.</p>
+							<br>
+							<p>Topics: sexual orientation, trans* basics <a href="#">Add</a></p>
 						</td>
 						<td>
 							<p>Asked: March 31, 2014 by anonymous</p>
@@ -172,7 +185,6 @@
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
 							</button>
 							</p>
-							<p>Topics: topic1, topic2 <a href="#">Add</a></p>
 						</td>
 					</tr>
 				</table>
@@ -223,13 +235,16 @@
 						<td>
 							<h3 class="list-group-item-heading">question title here</h3>
 							<p class="list-group-item-text">full question text</p>
+							<br>
+							<p>Topics: <a href="#">Add</a></p>
 						</td>
 						<td>
 							<p>Asked: February 1, 2014 by user1</p>
-							<p>30 Likes
-								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							<p>50 Followers
+								<button class="btn btn-default">
+								<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
+								</button>
 							</p>
-							<p>Topics: <a href="#">Add</a></p>
 							<p><a href="#answer">Answer this question</a></p>
 						</td>
 					</tr>
@@ -237,13 +252,16 @@
 						<td>
 							<h3 class="list-group-item-heading">question title here</h3>
 							<p class="list-group-item-text">full question text</p>
+							<br>
+							<p>Topics: <a href="#">Add</a></p>
 						</td>
 						<td>
 							<p>Asked: March 31, 2014 by anonymous</p>
-							<p>29 Likes 
-								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							<p>29 Followers
+								<button class="btn btn-default">
+									<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
+								</button>
 							</p>
-							<p>Topics: <a href="#">Add</a></p>
 							<p><a href="#answer">Answer this question</a></p>
 						</td>
 					</tr>
@@ -251,6 +269,51 @@
 			</div>
 			<div class="tab-pane" id="all">
 			<br>	<h1>All Questions</h1><br>
+			<table class="table" id="hotAnswersTable">
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
+							<p class="list-group-item-text">Sex is strictly biological - the physical body - while gender 
+							encompasses biological, cognitive, and social aspects of a human being, including identity, 
+							expression, and the expectations of others. Because gender and sex are not the same thing, 
+							it is possible for a person's sex and gender to disagree. When this happens, it can be extremely 
+							problematic for the person dealing with this incongruity, and it can often be life-threatening, 
+							due to the potential for suicide. This sex/gender incongruity has been determined by many 
+							professional organizations and courts to be a medical condition.</p>
+							<br>
+							<p>Topics: sex and gender, trans* basics <a href="#">Add</a></p>
+						</td>
+						<td>
+							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
+							<p>30 Likes
+							<button type="button" class="btn btn-default"> 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</button>
+							</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h3 class="list-group-item-heading">Does being transgender mean I'm gay?</h3>
+							<p class="list-group-item-text">Gender identity and sexual orientation are different concepts in 
+							Western culture. Sexual orientation refers to a person's attractions. Gender identity refers to who 
+							a person believes him- or herself to be. Transgender and transsexual people can have any sexual 
+							orientation. It is also possible for sexual attraction to change after transition. It is better 
+							not to put too much importance on labels such as gay, lesbian, and straight. In many ways, trans 
+							people confound the ''simple'' expectations of sexual orientation that go with such labels.</p>
+							<br>
+							<p>Topics: sexual orientation, trans* basics <a href="#">Add</a></p>
+						</td>
+						<td>
+							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>29 Likes 
+							<button type="button" class="btn btn-default"> 
+								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
+							</button>
+							</p>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div class="tab-pane" id="askq">
 				<!-- Ask a Question -->
@@ -312,5 +375,6 @@
 	bootstrap components page
 	bootstrap javascript page
 	http://stackoverflow.com/questions/17357630
+	question content from http://tranifesto.com/transgender-faqs-and-info/transgender-faq/
 	-->
 </html>
