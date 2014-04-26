@@ -1,28 +1,34 @@
-<template name="index">
+ <template name="request"> 
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Trans*Network</title>
-	
+
     <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css"><!--for different sized screens -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="home.css" />
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<script>
+		$(function() {
+	  // Setup drop down menu
+	  $('.dropdown-toggle').dropdown();
+	 
+	  // Fix input element click problem
+	  $('.dropdown input, .dropdown label').click(function(e) {
+		e.stopPropagation();
+	  });
+	});
+	</script>
   </head>
   <body>
-	<nav class="navbar navbar-default" role="navigation">
+  	<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -71,25 +77,38 @@
 </nav>
 
 	<div class="container">
-		<img class="logo" src="img/logo.png"/>
-		<div class="questions">
-			<h1><a href="{{ pathFor 'questions' }}">Questions</a></h1>
-			<p><a href="{{ pathFor 'questions_ask' }}">Ask</a> and <a href="{{ pathFor 'questions_answer' }}">answer</a> questions</p>
-		</div>		
-		<div class="stories">
-			<h1><a href="{{ pathFor 'stories' }}">Stories</a></h1>
-			<p><a href="{{ pathFor 'stories' }}">Read</a> others' stories <br> and <a href="{{ pathFor 'storiesMyStory' }}">edit</a> your story</p>
-		</div>
-		<div class="mentors">
-			<h1><a href="{{ pathFor 'requestbecome' }} ">Mentoring</a></h1>
-			<p><a href="{{ pathFor 'request' }}">Request a mentor</a> or <a href="{{ pathFor 'become' }}">become a mentor</a>!</p>
-		</div>		
+	<div class="top">
+	<h1 style="width:600px; border:3px"> Request a mentor </h1>
+	<div class="faq"> 
+	<table class="faq" style="height:500px; width:500px">
+	<tr>
+	<td> <h3> Match me with someone who identifies as: </h3>
+	<form> 
+	<input type="radio" value="transman">Transman <br>
+	<input type="radio" value="transwoman"> Transwoman <br>
+	Other <input type="input" value="other">  </form>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<h3> Message to potential mentor </h3>
+	<textarea class="form-control" id="qcontent" placeholder="Message" required></textarea>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<h3> Anything else you want to share? </h3><br>
+	<button style="color: blue"> Request a mentor </button>
+	</td>
+	</tr>
+	</table>
+	
 	</div>
-
+	</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
-  
 </template>
-
-

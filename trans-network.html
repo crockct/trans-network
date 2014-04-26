@@ -1,12 +1,30 @@
 <head>
-  <title>trans-network</title>
+  <title>Trans*Network</title>
  <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"/><!--for different sized screens -->
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 	<link rel="stylesheet" type="text/css" href="home.css" />
+	<script>
+		$(function() {
+	  // Setup drop down menu
+	  $('.dropdown-toggle').dropdown();
+		
+	  // Fix input element click problem
+	  $('.dropdown input, .dropdown label').click(function(e) {
+		e.stopPropagation();
+	  });
+	});
+	var setData=function()
+	{
+	console.log("hello");
+	var vari;
+	$(body).data("name", "become");
+	console.log($(body).data("name"));
+	};
+	</script>
 </head>
 
 <body>
-  {{> index}}
+{{ > yield region="content"}}
 </body>
