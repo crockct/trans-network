@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans*Network | Questions</title>
   </head>
-  <body>
   	<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -27,7 +26,6 @@
         <li><a href="{{ pathFor 'requestbecome' }}">Mentoring</a></li>
 		<li><a href="{{ pathFor 'questions' }}">Questions</a></li>
 		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
-		<li><a href="#">People</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <li><a href="sign_up.html">Sign Up</a></li>
@@ -183,6 +181,9 @@
 			</div>
 			<div class="tab-pane" id="followed">
 			<br><h1>Followed Questions </h1><br>
+				<div style="padding-bottom: 15px;">
+					<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
+				</div>
 				<table class="table" align="center" id="followedQuestionsTable">
 					<tr>
 						<td>
@@ -222,7 +223,6 @@
 						</td>
 					</tr>
 				</table>
-				<button class="btn btn-primary btn-lg" type="submit" id="unfollow">Unfollow Selected</button>
 			</div>
 			<div class="tab-pane" id="unanswered">
 			<br><h1> Unanswered Questions</h1>
@@ -347,28 +347,19 @@
 					<p>To improve your chances of having your questions answered...</p>
 					<table class="table table-condensed col-md-12">
 						<tr>	
-							<td class="pull-right">
-									<div class="input-group-lg">
-										<text class="table-text">Title</text>
-									</div>
-							</td>
+							<td class="pull-right table-text">Title</td>
 							<td> <input type="text" class="form-control" id="qtitle" maxlength="250" 
 								placeholder="Title" autofocus required>
 							</td>
 						</tr>
 						<tr>			
-							<td class="pull-right">
-								<text class="table-text">Question</text>
-							</td>
+							<td class="pull-right table-text">Question</td>
 							<td> 
 								<textarea class="form-control" id="qcontent" rows="3" style="width=900px" placeholder="Question" required></textarea>
 							</td>
 						</tr>
 						<tr>
-							<td width="300px">
-								<text class="table-text pull-right">Send me email updates</text>
-							</td>
-								
+							<td class="table-text pull-right" width="300px">Send me email updates</td>	
 							<td>
 								<div class="input-group">
 									<span class="input-group-addon">
@@ -388,16 +379,6 @@
 			</div><!-- end tab pane div -->
 		</div><!-- end ALL tab content div -->
 	</div><!-- end container used for content -->
-	<div class="navbar navbar-fixed-bottom" id="footer">
-		<div class="container">
-			<small class="text-muted">Copyright 2014</small>
-		</div>
-	</div>
-
-   
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
   <!-- Sources: 
 	bootstrap components page
 	bootstrap javascript page
