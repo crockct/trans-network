@@ -7,15 +7,12 @@ Router.configure({
 Router.map(function() {
   this.route('stories'),
   this.route('questions'),
+  this.route('index', {path: '/', }),
   
-    this.route('index', {
-    path: '/',
-  }),
- 
-   this.route('requestbecome'),
-  
-   this.route('request'),
-   this.route('become')
+  this.route('requestbecome'),
+  this.route('mentoring'),
+  this.route('request'),
+  this.route('become')
 });
 
 

@@ -1,125 +1,130 @@
-<head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
-  
-  <div>
-	
-  <div>
-    
-    <div>
-      <button type="button">
-        <span>Toggle navigation</span>
-        <span></span>
-        <span></span>
-        <span></span>
+<template name="mentoring">  
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans*Network</title>
+	<script>
+
+	$(function(){
+		$("#envelope").on('click', function(e){
+			e.preventDefault();
+			myWindow = window.open("new_message.html","","width=1000,height=800"); 
+		});
+	});
+
+	</script>
+  </head>
+	<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
 	
     </div>
 
-    
-    <div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	
-      <ul>
-		<li><a><img src="http://img/trans_logo.png"></a></li>
-        <li><a>Mentoring</a></li>
-		<li><a>Questions</a></li>
-		<li><a>Stories</a></li>
-		<li><a href="#0.2_">People</a></li>
+      <ul class="nav navbar-nav">
+		<li><a href="{{ pathFor 'index' }}"><img class="trans_logo" src="img/trans_logo.png"/></a></li>
+        <li><a href="{{ pathFor 'requestbecome' }}">Mentoring</a></li>
+		<li><a href="{{ pathFor 'questions' }}">Questions</a></li>
+		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
+		<li><a href="#">People</a></li>
       </ul>
-      <ul>
-          <li><a href="http://sign_up.html" target="_blank">Sign Up</a></li>
-          <li></li>
-          <li>
-            <a href="#0.2_">Sign In <strong></strong></a>
-            <div style="padding:15px;padding-bottom:0px">
-              
-			  <form method="post" accept-charset="UTF-8" target="_blank" onsubmit="return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);">
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="sign_up.html">Sign Up</a></li>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+              <!-- Login form here -->
+			  <form action="" method="post" accept-charset="UTF-8">
 			  <p> Username </p>
-			  <input style="margin-bottom:15px" type="text" name="user[username]" size="30">
+			  <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
 			  <p> Password </p>
-			  <input style="margin-bottom:15px" type="password" name="user[password]" size="30">
-			  <input style="float:left;margin-right:10px" type="checkbox" name="user[remember_me]" value="1">
-			  <label> Remember me</label>
+			  <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
+			  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+			  <label class="string optional" for="user_remember_me"> Remember me</label>
 			 
-			  <input style="clear:left;width:100%;height:32px;font-size:13px" type="submit" name="commit" value="Sign In">
+			  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
 			  <p></p>
 			  </form>
             </div>
           </li>
       </ul>
-    </div>
-  </div>
-
-<div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
 	
 
 	<h1> Mentoring </h1> 
 	
-		<ul>
-			<li><a href="#0.2_default">Home</a></li>
-			<li><a href="#0.2_request1">Request a mentor</a></li>
-			<li><a href="#0.2_become1">Become a mentor</a></li>
-			<li><a href="#0.2_faq1">Become a mentor FAQ</a></li>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="#default" data-toggle="tab">Home</a></li>
+			<li><a href="#request"  data-toggle="tab">Request a mentor</a></li>
+			<li><a href="#become" data-toggle="tab">Become a mentor</a></li>
+			<li><a href="#faq" data-toggle="tab">Become a mentor FAQ</a></li>
 		</ul>
 		
-	<div>
-		<div>
-			<table style="height:700px;width:700px">
-				<tr>
-					<td> 
-						<h3> List of all mentees </h3>
-						<table border="1">
-						<tr><td> alisa </td>
-						<td> <button><i></i></button></td> 
+	<div class="tab-content">
+		<div class="tab-pane active" id="default">
+			<h3> Your Mentees </h3>
+				<table id ="mentees" border="1">
+					<tr>
+						<td> alisa </td>
+						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td style="width:100%;height:100%">
-						time1 title1
-						<br> Hi! I have been having some problems with figuring <br> out the...<a href="#0.2_"> Read more</a>
+							time1 title1
+						<br> Hi! I have been having some problems with figuring out the...<a href="#0.2_"> Read more</a>
 						<br>
 						time2 title2
 						<br> I was wodnering if we could talk more.... <a href="#0.2_">Read more...</a>
-						</td></tr>
-						<tr><td> ben</td> 
-						<td> <button><i></i></button></td> 
-						<td> messages </td></tr>
-						<tr><td> jim</td> 
-						<td> <button><i></i></button></td>
-						<td> messages </td></tr>
-						<tr><td> julia</td> 
-						<td> <button><i></i></button></td>
-						<td> messages </td></tr>					
-						</table>
-					</td>
-				</tr>
-				<tr>
-					<td> <h3> Would you like to have another mentee? </h3>
-					<a href="http://become.html" target="_blank">become a mentor</a>
-						<button type="button" style="width:370px;height:50px" value="Request a mentee"> </button>
-						<br>
-						<br>
-						  If you are confused still and want to know more about the mentoring <a href="http://FAQ+page.html" target="_blank"> FAQ </a> 
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h3>Would you like to request a mentor? </h3>
-						<a href="http://request.html" target="_blank"> request a mentor</a>
-						<input type="button" style="width:370px;height:50px" value="Request a mentor">
-		
-					</td>
-				</tr>
+						</td>
+					</tr>
+					<tr>
+						<td> ben</td> 
+						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+						<td> messages </td>
+					</tr>
+					<tr>
+						<td> jim</td> 
+						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+						<td> messages </td>
+					</tr>
+					<tr>
+						<td> julia</td> 
+						<td><button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+						<td> messages </td>
+					</tr>					
+				</table><!-- end of mentee table -->
+<h3> You have no mentors </h3>
+			<table id="mentors" border="1">
 			</table>
-		</div>
-		
-	<div>
-		<table style="height:600px;width:700px">
+	</div> <!-- end of this tab pane -->
+
+	<div class="tab-pane" id="request">
+		<table style="height:600px; width:700px">
 			<tr>
 				<td> <h3> Match me with someone who identifies as: </h3>
-				<div>
-					<label> 
-						<input type="radio" checked value="transman" name="gender">Transman</label>
-						
+					<div class="col-md-10">
+						<label class=radio> 
+							<input type="radio" checked value="transman" name="gender">Transman</label>
 						<label>
-						<input type="radio" value="transwoman" name="gender">Transwoman</label>
-						Other <input type="input" value="">
-						</div>
+							<input type="radio" value="transwoman" name="gender">Transwoman</label>
+						<br>
+						<label>
+							<input type="radio" value="other" name="gender">Other
+						</label>
+							<input type="input" value="">
+					</div>
 				</td>
 			</tr>
 			<tr>
@@ -131,67 +136,39 @@
 			<tr>
 				<td>
 					<h3> Anything else you want to share? </h3><br>
-					<input value="Request a mentor">
+					<textarea value="Request a mentor"></textarea>
 				</td>
 			</tr>
 		</table>
-	</div>
+		<button class="btn btn-primary" id="request_mentor">Submit Mentor Request</button>
+	</div><!-- end of this tab pane -->
 	
-	<div>
-	<table style="width:700px">
-	<tr><td>
-	<h3>
-	Select one or more potential mentees </h3>
-	<table>
-	<tr>
-	<td>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:requestbecome - Copy.html
-	<input type="checkbox"> 
-	</td><td> alisa </td><td>
-=======
-	<input type="checkbox">
-	</td><td>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; ed71707433d2954921c678f3cf0be3<WBR>21e99cee56:requestbecome.html
-	<td>
-	<h3> Message of alisa</h3>
-	<p> I am a transwoman and I like spending time figuring out how to help the community. I am willing to spend much of my free time 
+	<div class="tab-pane" id="become">
+		<h3>Select one or more potential mentees</h3>
+		<table style="width:700px" id="available_mentees">
+			<tr>
+				<td>
+					<input type="checkbox"> 
+				</td>
+				<td> alisa </td>
+				<td>
+					<h3> Message of alisa</h3>
+					<p> I am a transwoman and I like spending time figuring out how to help the community. I am willing to spend much of my free time 
 to help others but first I am very much willing to learn from someone who has done community service </p>
-	</td>
-	 </td></tr>
-	<td><table><td>
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:requestbecome - Copy.html
-	<tr>
-	<td>
-	<input type="checkbox"> 
-	</td><td> jim </td>
-	<td>
-	<h3> Message of jim</h3>
-	<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to realize
-that the community here is larger than in most places in Europe. I am looking for someone to talk to and discuss how the community here is.	</p>
-	</td>
-	 </tr><td>
-=======
-		<tr>
-			<td>
-				<input type="checkbox">
-			</td>
-			<td>
-				<h3> Message of jim</h3>
-				<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to 				realize that the community here is larger than in most places in Europe. I am looking for someone to talk 			to and discuss how the community here is.	</p>
-			</td>
-			<td> jim 
-			</td> 
-		</tr><td>
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; ed71707433d2954921c678f3cf0be3<WBR>21e99cee56:requestbecome.html
-	</td></td></td></table>
-	<tr> <td> <input value="Request mentees"> </td> </tr> 
-	</td></table>
-	</td>
-	</tr>
-	</table>
-	</div>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td> jim </td>
+				<td><h3> Message of jim</h3>
+				<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to realize that the community here is larger than in most places in Europe. I am looking for someone to talk to and discuss how the community here is.	</p>
+				</td>
+	 		</tr>
+		</table><!-- end of available mentees taable -->
+	<button class="btn btn-primary" id="request_mentor">Request Mentees</button>
+	</div><!-- end of this tab pane -->
 	
-	<div>
+	<div class="tab-pane" id="faq">
 	
 	<table style="height:650px;width:700px">
 	<tr>
@@ -216,9 +193,10 @@ is sometimes more importnat then the information they find on the internet. As s
 but also very rewarding.	</td>
 	</tr>
 	<tr>
-	<td>
-	<h3 style="margin-left:300px"> Think you are ready? </h3>
-	<input value="Become a mentor" type=" button" style="margin-left:300px"> </td>
+		<td>
+		<h3 style="margin-left:300px"> Think you are ready? </h3>
+		<button class="btn btn-primary" value="Become a mentor">Become a mentor</button>
+		</td>
 	</tr>
 	</table>
 	</div>
@@ -226,8 +204,4 @@ but also very rewarding.	</td>
 </div>
 </div>
 
-    
-    
-  </div>
- 
-</body>
+</template>
