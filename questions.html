@@ -206,19 +206,14 @@
 							<input type="checkbox" id="selectq2">
 						</td>
 						<td>
-							<h3 class="list-group-item-heading">I think my partner might be trans*</h3>
-							<p class="list-group-item-text">I think my partner is questioning his gender identity. 
-							He is maab and has been talking a lot about how he doesn't feel comfortable with male gender 
-							roles, and seems to have some body dysphoria. He is struggling with not conforming to gender
-							roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't 
-							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
-							obviously I don't want to push him on this. How can I be most supportive?</p>
+							<h3 class="list-group-item-heading">title</h3>
+							<p class="list-group-item-text">content</p>
 							<br>
-							<text>Topics: significant others <a href="#">edit</a></text>
+							<text>Topics: topics<a href="#">edit</a></text>
 							<text class="pull-right"><a href="#">Answer</a></text>
 						</td>
 						<td style="width:200px">
-							<p>Asked: March 31, 2014 by anonymous</p>
+							<p>Asked: asked date by asker</p>
 							<p>Status: Unanswered</p>
 						</td>
 					</tr>
@@ -227,53 +222,34 @@
 			<div class="tab-pane" id="unanswered">
 			<br><h1> Unanswered Questions</h1>
 				<table class="table" align="center" id="unansweredQuestionsTable">
+					{{#each unanswered}}
 					<tr>
 						<td>
-							<h3 class="list-group-item-heading">question title here</h3>
-							<p class="list-group-item-text">full question text</p>
+							<h3 class="list-group-item-heading">{{title}}</h3>
+							<p class="list-group-item-text">{{content}}</p>
 							<br>
-							<text>Topics: <a href="#">edit</a></text>
+							<text>Topics: {{topics}} <a href="#">edit</a></text>
 							<text class="pull-right"><a href="#">Answer</a></text>
 						</td>
 						<td style="width:200px">
-							<p>Asked: February 1, 2014 by <a href="#">user1</a></p>
-							<p align="center">50 Followers
+							<p>Asked: {{askeddate}} by <a href="#">{{askedby}}</a></p>
+							<p align="center">{{followers}} Followers
 								<button class="btn btn-default">
 								<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
 								</button>
 							</p>
 						</td>
 					</tr>
-					<tr>
-						<td>
-							<h3 class="list-group-item-heading">I think my partner might be trans*</h3>
-							<p class="list-group-item-text">I think my partner is questioning his gender identity. 
-							He is maab and has been talking a lot about how he doesn't feel comfortable with male gender 
-							roles, and seems to have some body dysphoria. He is struggling with not conforming to gender
-							roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't 
-							know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 
-							obviously I don't want to push him on this. How can I be most supportive?</p>
-							<br>
-							<text>Topics: significant others <a href="#">edit</a></text>
-							<text class="pull-right"><a href="#">Answer</a></text>
-						</td>
-						<td style="width:200px">
-							<p>Asked: March 31, 2014 by anonymous</p>
-							<p align="center">29 Followers
-								<button class="btn btn-default">
-									<span class="glyphicon glyphicon-bell"></span><!-- from http://glyphicons.com/ -->
-								</button>
-							</p>
-						</td>
-					</tr>
+					{{/each}}
 				</table>
 			</div>
 			<div class="tab-pane" id="all">
 			<br>	<h1>All Questions</h1><br>
 			<table class="table" align="center" id="allQuestionsTable">
+					{{#each questions}}
 					<tr>
 						<td>
-							<h3 class="list-group-item-heading">What is the difference between sex and gender?</h3>
+							<h3 class="list-group-item-heading">{{title}}</h3>
 							<p class="list-group-item-text">Sex is strictly biological - the physical body - while gender 
 							encompasses biological, cognitive, and social aspects of a human being, including identity, 
 							expression, and the expectations of others. Because gender and sex are not the same thing, 
@@ -282,11 +258,11 @@
 							due to the potential for suicide. This sex/gender incongruity has been determined by many 
 							professional organizations and courts to be a medical condition.</p>
 							<br>
-							<text>Topics: sex and gender, trans* basics <a href="#">edit</a></text>
+							<text>Topics: {{topics}} <a href="#">edit</a></text>
 							<text class="pull-right"><a href="#">Add another answer</a></text>
 						</td>
 						<td style="width:200px">
-							<p>Asked: February 1, 2014 by <a href="#">username1</a></p>
+							<p>Asked: {{askeddate}} by <a href="#">{{askedby}}</a></p>
 							<p align="center">30 Likes
 							<button type="button" class="btn btn-default"> 
 								<span class="glyphicon glyphicon-thumbs-up"></span><!-- from http://glyphicons.com/ -->
@@ -294,6 +270,7 @@
 							</p>
 						</td>
 					</tr>
+					{{/each}}
 					<tr>
 						<td>
 							<h3 class="list-group-item-heading">Does being transgender mean I'm gay?</h3>
