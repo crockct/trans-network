@@ -1,4 +1,4 @@
-<template name="stories">
+<template name="storiesAllJill">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@
 	</script>
   </head>
   <body>
-  	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -43,21 +43,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-	
+      <a class="navbar-brand" href="index.html"><img class="trans_logo" src="img/trans_logo.png"/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	
       <ul class="nav navbar-nav">
-		<li><a href="{{ pathFor 'index' }}"><img class="trans_logo" src="img/trans_logo.png"/></a></li>
-        <li><a href="{{ pathFor 'requestbecome' }}">Mentoring</a></li>
-		<li><a href="{{ pathFor 'questions' }}">Questions</a></li>
-		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
+        <li><a href="requestbecome.html">Mentoring</a></li>
+		<li><a href="questions.html">Questions</a></li>	
+		<li><a href="stories.html">Stories</a></li>
 		<li><a href="#">People</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="sign_up.html">Sign Up</a></li>
+          <li><a href="/users/sign_up">Sign Up</a></li>
           <li class="divider-vertical"></li>
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
@@ -80,6 +78,8 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
 	<div class="container">
 		<h1>Stories</h1>
 	
@@ -97,16 +97,16 @@
 		
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#hot1" data-toggle="tab">Hot Stories</a></li>
+			<li ><a href="#hot1" data-toggle="tab">Hot Stories</a></li>
 			<li><a href="#topic1" data-toggle="tab">By Topic</a></li>
 			<li><a href="#followed1" data-toggle="tab">Followed</a></li>
 			<li><a href="#myStory" data-toggle="tab">My Story</a></li>
-			<li><a href="#all1" data-toggle="tab">All Stories</a></li>
+			<li class="active"><a href="#all1" data-toggle="tab">All Stories</a></li>
 		</ul>
 		
 		<!-- Tab Pane Contents (from http://getbootstrap.com/javascript/#tabs) -->
 		<div class="tab-content">
-			<div class="tab-pane active" id="hot1">
+			<div class="tab-pane" id="hot1">
 			
 			
 				 <br>  <h1>Most Popular Stories </h1> <br>
@@ -121,7 +121,7 @@
     			<button type="button" class="btn btn-default"> 
 				<img src="img/hug.png" >
 			</button>
-    </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
+    </div> <br><a href="storiesJillsStory.html"> 2 Comments </a> <br> <br> <a href="storiesJillsStory.html">Read More...</a></td> 
 </tr>
 </table>
 
@@ -210,16 +210,7 @@
 							<table border="1" style="width:700px" align="center">
 <tr>
   <td><b>My Story</b> <br> I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.</td>
-  <td class="hugs" >50 hugs <div title="Give a hug!"> 
-  
-  
-  			<button type="button" class="btn btn-default"> 
-				<img src="img/hug.png" >
-			</button>
-  
-  
-  
-  </div> <br> 0 Comments  </td> 
+  <td class="hugs" >50 hugs <div title="Give a hug!"> <img src="img/hug.png" ></div> <br> 0 Comments  </td> 
 
 </tr>
 
@@ -230,47 +221,56 @@
 				</p>
 				
 			</div>
-			<div class="tab-pane" id="all1">
-			 <br>	<h1>All Stories</h1>  <br>
+			<div class="tab-pane active" id="all1">
+			 <br>	<h1>All Stories: Jill's Story</h1>  <br>
 				
 	<table border="1" style="width:700px" align="center">
 <tr>
-	<td>
-		<b><a href="storiesAllJill.html">Jill's Story</a></b> 
-		<br> I’m transgender, meaning the gender that was assigned to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a coherent way.
-	</td>
-    <td class="hugs">
-		50 hugs 
-		<div title="Give a hug!">
-			<button type="button" class="btn btn-default"> 
-				<img src="img/hug.png" >
-			</button>
-		</div> <br><a href="storiesAllJill.html"> 2 Comments </a> <br> <br> <a href="storiesAllJill.html">Read More...</a></td> 
-
-</tr>
-
-</table>
-
+  <td><b>Jill's Story</b> <br> I’m transgender, meaning the gender that was assigned to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a coherent way. I started struggling when puberty hit, around age 12. I watched as my body
+turned what felt to me grotesquely masculine, and my mind began to feel as
+though it was in a fog of testosterone. My brain was like a Camry someone had
+tried to fuel with diesel — it wasn’t meant to run on testosterone. I wished I
+could be like the other girls in my class. Something just seemed right about
+who they were, how they were. 
 <br>
-				<table border="1" style="width:700px" align="center">
-
-<tr>
-  <td><b> <a href="storiesAllEve.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
-    <td  class="hugs"  >50 hugs <div title="Give a hug!" >	
-    		<button type="button" class="btn btn-default"> 
+I sank into a depression that lasted for years. I didn’t understand why. I tried
+therapy, anti-depressants, anti-convulsants, and anti-anxiety medications.
+They didn’t help. I finally gave up trying to fix it. I thought there was nothing I
+could do.
+<br>
+At age 26, after years of repressing these feelings, the dissonance between my
+mind, body and life itself became too much to handle. Every morning I woke
+up feeling more shame and anxiety than ever before. I took up smoking, a
+habit I’d kicked nearly two years prior. I couldn’t sleep without drinking, and I
+often drank until I couldn’t walk. Still, the feelings persisted. I considered
+suicide.
+</td>
+    <td class="hugs" >50 hugs <div title="Give a hug!"> 
+    
+        			<button type="button" class="btn btn-default"> 
 				<img src="img/hug.png" >
 			</button>
-			</div> <br> <a href="storiesAllEve.html">2 Comments </a><br> <br><a href="storiesAllEve.html"> Read More...</a></td> 
+    
+    
+    
+    </div> <br> 2 Comments <br> <br> 
+    Stay Strong! <i>by anonymous</i> <br><br> I feel the exact same way. <i>by queerGuy101</i> <br> <br> <a href="storiesAll.html"> <button class="btn btn-primary btn-lg" type="back" id="back">back to all stories</button></a>
+    </td> 
 
 </tr>
+
 </table>
+
 <br>
 			</div>
+			<br>{{ > input }}
 			
 		</div>
-		
-		
+		<br>{{ > messages }}
+	
 	</div><!-- end container used for content -->
+	
+	
 
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->

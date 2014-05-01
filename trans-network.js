@@ -15,7 +15,8 @@ Router.map(function() {
    this.route('requestbecome'),
   
    this.route('request'),
-   this.route('become')
+   this.route('become'),
+   this.route('storiesAllJill')
 });
 
 
