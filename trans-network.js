@@ -24,6 +24,7 @@ if (Meteor.isServer) {
     // code to run on server at startup
 
 	// Seed Data
+	if (Questions.find().count() === 0) {
 	Questions.insert({title: "I think my partner might be trans*", content: "I think my partner is questioning his gender identity. He is maab and has been talking a lot about how he doesn't feel comfortable with male gender roles, and seems to have some body dysphoria. He is struggling with not conforming to gender roles; he says he feels guilty. I 100% support him no matter what, but as a ciswoman I don't know how he is feeling or what I should do. He hasn't explicitly told me he's questioning, and 							obviously I don't want to push him on this. How can I be most supportive?", topics: "significant others", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"});
 
 
@@ -31,7 +32,8 @@ if (Meteor.isServer) {
 
 Questions.insert({title: "Question Title", content: "this is a sample question", topics: "sex and gender, trans* basics", answers: "1", askedby: "anonymous", askeddate: "", followers: "0"});
 
-  });
+  } // end if empty
+	});
 }
 
 
@@ -45,6 +47,11 @@ if (Meteor.isClient) {
 	Template.questions.unanswered = function () {
 		return Questions.find({answers: "0"});
 	};
+
+	Template.questions.events({
+	
+		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"});
+	})
 
 
 
