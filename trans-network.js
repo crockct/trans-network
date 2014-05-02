@@ -12,10 +12,22 @@ Router.map(function() {
   this.route('questions'),
   this.route('index', {path: '/', }),
   
+<<<<<<< HEAD
+    this.route('index', {
+    path: '/',
+  }),
+ 
+   this.route('requestbecome'),
+  
+   this.route('request'),
+   this.route('become'),
+   this.route('storiesAllJill')
+=======
   this.route('requestbecome'),
   this.route('mentoring'),
   this.route('request'),
   this.route('become')
+>>>>>>> 143e380b35a4f86ad362fb154123628962b6c893
 });
 
 
