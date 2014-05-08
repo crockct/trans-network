@@ -50,9 +50,9 @@ if (Meteor.isClient) {
 		return Questions.find({answers: "0"});
 	};
 
-	Template.questions.events({
+/*	Template.questions.events({
 	
-		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"});
+		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); */
 	})
 
 
