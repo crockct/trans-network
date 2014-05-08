@@ -1,9 +1,11 @@
+<!--Taken from chatt.meteor.com-->
+
+
 <template name="input">
 	<div id="input" class="well">
-		<strong>Your message</strong>
-		<textarea class="input-xlarge" rows="3" id="newMessage"></textarea>
-		<input type="text" class="input-xlarge" placeholder="username" id="username" />
-		<a class="btn btn-primary" id="send">Send</a>
+		<strong>Leave a comment:</strong>
+		<br><textarea class="input-xlarge" rows="3" id="newMessage"></textarea>
+		<br><a class="btn btn-primary" id="send">Send</a>
 	</div>
 </template>
 
@@ -16,8 +18,7 @@
 </template>
 
 <template name="message">
-	<blockquote>
-		<p>{{message}}</p>
-		<small>{{username}}</small>
-	</blockquote>
+		<br>{{message}}
+		<i> by 
+		<br>cheesecakeboi</i><br>
 </template>

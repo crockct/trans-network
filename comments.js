@@ -8,20 +8,18 @@ if (Meteor.isClient) {
       sort: {
         timestamp: -1
       },
-      limit: 15
+      limit: 100
     });
   };
 
   Template.input.events({
     'click #send': function() {
       var message = $('#newMessage').val();
-      var username = $('#username').val();
-      if (!message || !username) {
+      if (!message) {
         alert('You are missing some information!');
       }
       Meteor.saveMessage({
         message: message,
-        username: username
       });
     }
   });
@@ -31,13 +29,11 @@ if (Meteor.isClient) {
   });
 
   Meteor.saveMessage = function(content) {
-    var username = content.username;
     var message = content.message;
-    if (!username || !message) {
+    if (!message) {
       return;
     }
     Messages.insert({
-      username: username,
       message: message,
       timestamp: Date.now()
     }, function(err, id) {
@@ -46,7 +42,6 @@ if (Meteor.isClient) {
       }
       if (id) {
         $('#newMessage').val('');
-        $('#username').val('');
       }
     });
   };
