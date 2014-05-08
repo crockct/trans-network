@@ -52,8 +52,8 @@ if (Meteor.isClient) {
 
 /*	Template.questions.events({
 	
-		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); */
-	})
+		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); 
+	}) */
 
 
 
