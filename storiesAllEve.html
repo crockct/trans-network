@@ -20,6 +20,20 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script>
+		var evehugs = 0;
+		document.getElementById("eve_hugs").innerHTML = evehugs;​
+		function eve_hugs(){
+			evehugs = evehugs + 1;
+			document.getElementById("eve_hugs").innerHTML = evehugs;​
+		}
+		
+		function jill_hugs(){
+			jillhugs = jillhugs + 1;
+		}
+		
+	</script>
+
   </head>
   <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -92,7 +106,7 @@
   coherent way.</td>
     <td class="hugs" >50 hugs <div title="Give a hug!">
     
-    			<button type="button" class="btn btn-default"> 
+    			<button type="button" class="btn btn-default" onClick="jill_hugs()"> 
 				<img src="img/hug.png" >
 			</button>
     </div> <br><a href="storiesJillsStory.html"> 2 Comments </a> <br> <br> <a href="storiesJillsStory.html">Read More...</a></td> 
@@ -104,10 +118,10 @@
 
 <tr>
   <td><b> <a href="storiesEvesStory.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
-    <td  class="hugs"  >50 hugs <div title="Give a hug!" > 
+    <td  class="hugs"  ><div id="eve_hugs"></div> hugs <div title="Give a hug!" > 
     
     
-			<button type="button" class="btn btn-default"> 
+			<button type="button" class="btn btn-default" onClick="eve_hugs()"> 
 				<img src="img/hug.png" >
 			</button>
     
@@ -165,7 +179,7 @@
 
 <tr>
   <td><b> <a href="storiesFollowedEve.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
-    <td  class="hugs"  >50 hugs <div title="Give a hug!" >
+    <td  class="hugs"  ><div id="eve_hugs"></div> hugs <div title="Give a hug!" >
     
     			<button type="button" class="btn btn-default"> 
 				<img src="img/hug.png" >
@@ -214,7 +228,7 @@
 
 <br>In my hometown of Hucknall, near Nottingham, there was one gay guy, who everyone was friendly with because he made them laugh, and one Asian family, who everyone knew because they owned a corner shop. This ex-mining community was unofficially headed up by the local hard man, a bouncer and former boxer who also happened to be my dad. My mother was 17 when she had me and found it hard to cope. My parents had a fiery breakup when I was a baby, so her sister, my lovely Aunty Rachael, and her mother, my caring grandmother – or Mama, pronounced "Mammar" in Hucknall – helped bring me up. I like to think I have my mama's kindness, my mum's charisma and my auntie's morals. What none of them passed on to me, unfortunately, was a womb.
 </td>
-    <td class="hugs" >50 hugs <div title="Give a hug!">
+    <td class="hugs" ><div id="eve_hugs"></div> hugs <div title="Give a hug!">
     
       			<button type="button" class="btn btn-default"> 
 				<img src="img/hug.png" >
