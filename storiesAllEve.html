@@ -22,20 +22,18 @@
     <![endif]-->
 	<script>
 		var evehugs = 0;
-		document.getElementById("eve_hugs").innerHTML = evehugs;​
-		function eve_hugs(){
-			evehugs = evehugs + 1;
-			document.getElementById("eve_hugs").innerHTML = evehugs;​
-		}
 		
-		function jill_hugs(){
-			jillhugs = jillhugs + 1;
-		}
+
+		
+		$(function() {
+			$("#eve_hugs").html(String(evehugs));
+			document.write("testing");
+		});
 		
 	</script>
 
   </head>
-  <body>
+  <body onload="sethugs()">
 	<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -121,7 +119,7 @@
     <td  class="hugs"  ><div id="eve_hugs"></div> hugs <div title="Give a hug!" > 
     
     
-			<button type="button" class="btn btn-default" onClick="eve_hugs()"> 
+			<button type="button" class="btn btn-default" onClick="hugs_eve()"> 
 				<img src="img/hug.png" >
 			</button>
     
@@ -181,7 +179,7 @@
   <td><b> <a href="storiesFollowedEve.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
     <td  class="hugs"  ><div id="eve_hugs"></div> hugs <div title="Give a hug!" >
     
-    			<button type="button" class="btn btn-default"> 
+    			<button type="button" class="btn btn-default" onClick="eve_hugs()"> 
 				<img src="img/hug.png" >
 			</button>
     
@@ -230,7 +228,7 @@
 </td>
     <td class="hugs" ><div id="eve_hugs"></div> hugs <div title="Give a hug!">
     
-      			<button type="button" class="btn btn-default"> 
+      			<button type="button" class="btn btn-default" onClick="hugs_eve()"> 
 				<img src="img/hug.png" >
 			</button>
   
@@ -258,4 +256,14 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
   </body>
+  <script>
+  		function hugs_eve(){
+			evehugs = evehugs + 1;
+			document.getElementById("eve_hugs").innerHTML = evehugs;​
+		}
+		
+		function jill_hugs(){
+			jillhugs = jillhugs + 1;
+		}
+	</script>
  </template>
