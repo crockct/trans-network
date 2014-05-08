@@ -9,7 +9,7 @@
 	$(function(){
 		$("#envelope").on('click', function(e){
 			e.preventDefault();
-			myWindow = window.open("new_message.html","","width=1000,height=800"); 
+			myWindow = window.open("{{ pathFor 'stories' }}","","width=1000,height=800"); 
 		});
 	});
 
@@ -80,7 +80,7 @@
 				<table id ="mentees" border="1">
 					<tr>
 						<td> alisa </td>
-						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=350'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td style="width:100%;height:100%">
 							time1 title1
 						<br> Hi! I have been having some problems with figuring out the...<a href="#0.2_"> Read more</a>
@@ -91,17 +91,19 @@
 					</tr>
 					<tr>
 						<td> ben</td> 
-						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=350'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						
 						<td> messages </td>
 					</tr>
 					<tr>
 						<td> jim</td> 
-						<td> <button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=350'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td> messages </td>
 					</tr>
 					<tr>
 						<td> julia</td> 
-						<td><button class="btn btn-primary" id="envelope"><span class="glyphicon glyphicon-envelope" ></span></button></td>
+
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=350'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td> messages </td>
 					</tr>					
 				</table><!-- end of mentee table -->

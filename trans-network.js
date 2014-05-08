@@ -17,7 +17,8 @@ Router.map(function() {
    this.route('become'),
    this.route('storiesAllEve'),
    this.route('storiesAllJill'),
-  this.route('mentoring')
+  this.route('mentoring'),
+   this.route('pm')
 });
 
 
