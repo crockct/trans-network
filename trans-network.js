@@ -24,6 +24,8 @@ Router.map(function() {
   this.route('search_questions'),
   this.route('answer_questions'),
   this.route('ask_questions'),
+  this.route('urgent'),
+  this.route('hey'),
    this.route('pm')
 });
 
