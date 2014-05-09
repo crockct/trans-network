@@ -39,9 +39,17 @@ if (Meteor.isServer) {
 
 Questions.insert({title: "Question Title", content: "this is a sample question", topics: "sex and gender, trans* basics", answers: "1", askedby: "anonymous", askeddate: "", followers: "0"});
 
-  } // end if empty
+  } // end if questions empty
+
+	if (Stories.find().count() === 0) {
+	Stories.insert({title: "Jill's Story", content: "I’m transgender, meaning the gender that was assigned   to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a coherent way.", hugs: 50});
+
+	Stories.insert({title: "Eve's Story", content: "I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense.", hugs: 0});
+
+  } // end if stories empty
+
 	});
-}
+} // end if server
 
 
 if (Meteor.isClient) {
@@ -58,12 +66,15 @@ if (Meteor.isClient) {
 	Template.questions.events({
 		'click #submitq': function() {
       		var q_content = $('#qcontent').val();
-      		if (!message) {
-       			alert('You are missing some information!');
-      	}
-      Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); 
+		    Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); 
     }
-
-
 	});
+
+	Template.stories.all = function () {
+		return Stories.find({});
+	};
+
+	Template.stories.popular = function () {
+		return Stories.find({hugs: {$gt: 9}});
+	};
 }
