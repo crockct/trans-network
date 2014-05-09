@@ -1,0 +1,81 @@
+<template name ="search_stories">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trans*Network | Stories</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css"><!--for different sized screens -->
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="home.css" />
+	
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+	{{> nav_bar}}
+
+	<div class="container">
+		<h1>Stories</h1>
+	
+	
+				<div class="input-group col-lg-2 pull-right">
+				<input type="text" height="34px" class="input-control pull-right-nopad heightchange"  placeholder="Search Stories">
+					<span class="input-group-btn">
+						<a class="btn btn-default" href="{{ pathFor 'search_stories'}}"><i class="glyphicon glyphicon-search"></i></a>
+				</span>
+			</div><!-- /input-group -->
+			
+			 <br>  <h1>Search Results </h1> <br>
+				<p>
+				<table border="1" style="width:700px" align="center">
+<tr>
+  <td><b><a href="storiesJillsStory.html">Jill's Story</a></b> <br> I’m transgender, meaning the gender that was assigned 
+  to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a 
+  coherent way.</td>
+    <td class="hugs" >50 hugs <div title="Give a hug!">
+    
+    			<button type="button" class="btn btn-default"> 
+				<img src="img/hug.png" >
+			</button>
+    </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
+</tr>
+</table>
+
+<br>
+				<table border="1" style="width:700px" align="center">
+
+<tr>
+  <td><b> <a href="storiesEvesStory.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
+    <td  class="hugs"  >50 hugs <div title="Give a hug!" > 
+    
+    
+			<button type="button" class="btn btn-default"> 
+				<img src="img/hug.png" >
+			</button>
+    
+    </div> <br> <a href="{{ pathFor 'storiesAllEve' }}">2 Comments </a><br> <br><a href="{{ pathFor 'storiesAllEve' }}"> Read More...</a></td> 
+
+</tr>
+</table>
+				</p>
+		
+			</div>
+			
+			
+
+   
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  </template>

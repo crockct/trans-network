@@ -25,19 +25,24 @@
 	{{> nav_bar}}
 
 	<div class="container">
-		<img class="logo" src="img/home_logo.png"/>
-		<div class="questions">
+		
+		<div style="position: relative;" class="anchor-point">
+			<img class="logo" src="img/home_logo.png"/>
+			<div class="questions">
 			<h1><a href="{{ pathFor 'questions' }}">Questions</a></h1>
 			<p><a href="{{ pathFor 'questions_ask' }}">Ask</a> and <a href="{{ pathFor 'questions_answer' }}">answer</a> questions</p>
-		</div>		
-		<div class="stories">
-			<h1><a href="{{ pathFor 'stories' }}">Stories</a></h1>
-			<p><a href="{{ pathFor 'stories' }}">Read</a> others' stories <br> and <a href="{{ pathFor 'storiesMyStory' }}">edit</a> your story</p>
+			</div>
+			<div class="stories">
+				<h1><a href="{{ pathFor 'stories' }}">Stories</a></h1>
+				<p><a href="{{ pathFor 'stories' }}">Read</a> others' stories <br> and <a href="{{ pathFor 'storiesMyStory' }}">edit</a> your story</p>
+			</div>
+			<div class="mentors">
+				<h1><a href="{{ pathFor 'mentoring' }} ">Mentoring</a></h1>
+				<p><a href="{{ pathFor 'request' }}">Request a mentor</a> or <a href="{{ pathFor 'become' }}">become a mentor</a>!</p>
+			</div>		
 		</div>
-		<div class="mentors">
-			<h1><a href="{{ pathFor 'requestbecome' }} ">Mentoring</a></h1>
-			<p><a href="{{ pathFor 'request' }}">Request a mentor</a> or <a href="{{ pathFor 'become' }}">become a mentor</a>!</p>
-		</div>		
+		
+
 	</div>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->

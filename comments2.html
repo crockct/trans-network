@@ -1,0 +1,24 @@
+<!--Taken from chatt.meteor.com-->
+
+
+<template name="input2">
+	<div id="input2" class="well">
+		<strong>Leave a comment:</strong>
+		<br><textarea class="input-xlarge" rows="3" id="newMessage2"></textarea>
+		<br><a class="btn btn-primary" id="send2">Send</a>
+	</div> 
+</template>
+
+<template name="messages2">
+	<div id="messages2">
+		{{#each messages2}}
+			{{> message2}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="message2">
+		<br>{{message2}}
+		<i> by 
+		<br>cheesecakeboi</i><br>
+</template>
