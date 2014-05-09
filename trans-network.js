@@ -61,11 +61,11 @@ Questions.insert({title: "Question Title", content: "this is a sample question",
 
 if (Meteor.isClient) {
 
-	Template.stories = function() { 
+/*	Template.stories = function() { 
 	  $('body').attr({
 		onload: 'init();'
 	  });
-	}
+	}*/
 
 	// all questions
 	Template.questions.all = function () {
@@ -83,7 +83,10 @@ if (Meteor.isClient) {
     },
 		'click .followbtn': function() {
 			Questions.update(this._id, {$inc: {followers: 1}}, {$set: {followed: true}});
-}
+		},
+		'click #unfollow': function() {
+			//TODO unfollow all selected questions
+		}
 	});
 
 	Template.stories.all = function () {
