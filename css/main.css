@@ -2,6 +2,8 @@
 /* All CSS we write goes in this file */
 .storiesTable{
 	text-align: left;
+	font-size: 150%;
+	line-height: 175%;
 }
 .pull-right{
 	float: right;
@@ -24,8 +26,8 @@
 
 .hugs{
 text-align:center;
-font-size:16px;
-width:35%;
+/*font-size:16px;*/
+width:25%;
 }
 
 
