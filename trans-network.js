@@ -24,13 +24,12 @@ Router.map(function() {
   this.route('search_questions'),
   this.route('answer_questions'),
   this.route('ask_questions'),
-<<<<<<< HEAD
   this.route('urgent'),
   this.route('hey'),
    this.route('pm')
-=======
+
   this.route('pm')
->>>>>>> da2962be184c2f82eea1b083d156b28cb75025f4
+
 });
 
 
