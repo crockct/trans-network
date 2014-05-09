@@ -22,36 +22,7 @@
 
   </head>
   <body>
-	<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	
-      <ul class="nav navbar-nav">
-		<li><a href="{{ pathFor 'index' }}"><img class="trans_logo" src="img/trans_logo.png"/></a></li>
-        <li><a href="{{ pathFor 'mentoring' }}">Mentoring</a></li>
-		<li><a href="{{ pathFor 'questions' }}">Questions</a></li>
-		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-		  <li><a href="">cheesecakeboi</a></li>
-		  <li class="divider-vertical"></li>
-		  <li><img src="img/avatar.jpg" height="40" width="40"></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+	{{> nav_bar}}
 
 	<div class="container">
 		<img class="logo" src="img/home_logo.png"/>
