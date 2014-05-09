@@ -27,29 +27,39 @@
 						<td> alisa </td>
 						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td style="width:100%;height:100%">
-							time1 title1
-						<br> Hi! I have been having some problems with figuring out the...<a href="#0.2_"> Read more</a>
-						<br>
-						time2 title2
-						<br> I was wodnering if we could talk more.... <a href="#0.2_">Read more...</a>
+							<div style="border-style:double;">
+							<p style="text-align:left;">
+							<a href onclick="window.open('{{ pathFor 'urgent' }}', 'newwindow', 'width=500, height=400'); return false;">Re: Having problems -- Please respond</a>
+							<span style="float:right;">April 28, 2014 <br> 05:16PM</span>
+							</p>
+							<hr>
+							</div>
+							<br>
+							<div style="border-style:double;">
+							<p style="text-align:left;">
+							<a href onclick="window.open('{{ pathFor 'hey' }}', 'newwindow', 'width=500, height=400'); return false;">Hey!</a>
+							<span style="float:right;">April 30, 2014 <br> 04:36PM</span>
+							</p>
+							<hr>
+							</div>
 						</td>
 					</tr>
 					<tr>
 						<td> ben</td> 
 						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						
-						<td> messages </td>
+						<td> No messages </td>
 					</tr>
 					<tr>
 						<td> jim</td> 
 						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
-						<td> messages </td>
+						<td>No messages</td>
 					</tr>
 					<tr>
 						<td> julia</td> 
 
 						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
-						<td> messages </td>
+						<td> No messages </td>
 					</tr>					
 				</table><!-- end of mentee table -->
 <h3> You have no mentors </h3>
@@ -61,10 +71,10 @@
 		<table style="height:600px; width:700px">
 			<tr>
 				<td> <h3> Match me with someone who identifies as: </h3>
-					<div class="col-md-10">
-						<label class=radio> 
-							<input type="radio" checked value="transman" name="gender">Transman</label>
-						<label>
+					<div class="col-md-10" align="left">
+						<label> 
+							<input type="radio" value="transman" name="gender">Transman</label>
+						<br><label>
 							<input type="radio" value="transwoman" name="gender">Transwoman</label>
 						<br>
 						<label>
@@ -73,6 +83,7 @@
 							<input type="input" value="">
 					</div>
 				</td>
+				
 			</tr>
 			<tr>
 				<td>
@@ -86,8 +97,13 @@
 					<textarea value="Request a mentor"></textarea>
 				</td>
 			</tr>
+			<tr>
+				<td>
+				<div align="center"><button class="btn btn-primary" id="request_mentor">Submit Mentor Request</button></div>
+				</td>
+			</tr>			
 		</table>
-		<button class="btn btn-primary" id="request_mentor">Submit Mentor Request</button>
+		
 	</div><!-- end of this tab pane -->
 	
 	<div class="tab-pane" id="become">
@@ -111,8 +127,11 @@ to help others but first I am very much willing to learn from someone who has do
 				<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to realize that the community here is larger than in most places in Europe. I am looking for someone to talk to and discuss how the community here is.	</p>
 				</td>
 	 		</tr>
+			<tr>
+				<td><div align="center"><button class="btn btn-primary" id="request_mentor">Request Mentees</button></div></td>
+	 		</tr>
 		</table><!-- end of available mentees taable -->
-	<button class="btn btn-primary" id="request_mentor">Request Mentees</button>
+	
 	</div><!-- end of this tab pane -->
 	
 	<div class="tab-pane" id="faq">
