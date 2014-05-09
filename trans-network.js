@@ -22,6 +22,8 @@ Router.map(function() {
    this.route('storiesMyStory'),
   this.route('search_stories'),
   this.route('search_questions'),
+  this.route('answer_questions'),
+  this.route('ask_questions'),
    this.route('pm')
 });
 
@@ -45,6 +47,12 @@ Questions.insert({title: "Question Title", content: "this is a sample question",
 
 
 if (Meteor.isClient) {
+
+	Template.stories = function() { 
+	  $('body').attr({
+		onload: 'init();'
+	  });
+	}
 
 	// all questions
 	Template.questions.all = function () {
