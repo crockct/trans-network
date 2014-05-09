@@ -21,6 +21,7 @@ Router.map(function() {
   this.route('mentoring'),
    this.route('storiesMyStory'),
   this.route('search_stories'),
+  this.route('search_questions'),
    this.route('pm')
 });
 
