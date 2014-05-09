@@ -5,6 +5,10 @@
 	font-size: 150%;
 	line-height: 175%;
 }
+.questionsTable{
+	font-size: 150%;
+	line-height: 175%;
+}
 .pull-right{
 	float: right;
 	padding-right: 15px; /* to match bootstrap container padding */
@@ -17,7 +21,6 @@
 .table-text{ /* used in forms */
 	vertical-align: middle;
 	font-size: 180%;
-	text-align: middle;
 }
 
 .heightchange{ /* used for searchbar */
@@ -33,8 +36,8 @@ width:25%;
 
 table, th,td
 {
+vertical-align: middle;
 background-color:white;
-padding:30px;
 font-family: georgia;
 } 
 

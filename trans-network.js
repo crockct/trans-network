@@ -26,8 +26,6 @@ Router.map(function() {
   this.route('ask_questions'),
   this.route('urgent'),
   this.route('hey'),
-   this.route('pm')
-
   this.route('pm')
 
 });
@@ -76,10 +74,14 @@ if (Meteor.isClient) {
 		return Questions.find({answers: 0});
 	};
 
+	Template.questions.followed = function () {
+		return Questions.find({followed: true});
+	};
+
 	Template.questions.events({
 		'click #submitq': function() {
   		var q_content = $('#qcontent').val();
-		  Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: Date.now(), followers: 0}); 
+		  Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: 0, askedby: "cheesecakeboi", askeddate: Date.now(), followers: 1, followed: true}); 
     },
 		'click .followbtn': function() {
 			Questions.update(this._id, {$inc: {followers: 1}}, {$set: {followed: true}});
