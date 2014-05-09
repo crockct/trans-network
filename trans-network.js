@@ -26,7 +26,8 @@ Router.map(function() {
   this.route('ask_questions'),
   this.route('urgent'),
   this.route('hey'),
-  this.route('pm')
+  this.route('pm'),
+  this.route('mentor_confirm')
 
 });
 
