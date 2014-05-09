@@ -51,11 +51,15 @@ if (Meteor.isClient) {
 		return Questions.find({answers: "0"});
 	};
 
-/*	Template.questions.events({
-	
-		Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); 
-	}) */
+	Template.questions.events({
+		'click #submitq': function() {
+      		var q_content = $('#qcontent').val();
+      		if (!message) {
+       			alert('You are missing some information!');
+      	}
+      Questions.insert({title: $('#qtitle').val(), content: $('#qcontent').val(), topics: "", answers: "0", askedby: "anonymous", askeddate: "", followers: "0"}); 
+    }
 
 
-
+	});
 }
