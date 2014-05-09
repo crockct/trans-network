@@ -8,7 +8,6 @@
   <body>
 	{{> nav_bar}}
 
-
 	<div class="container">
 		<h1>Stories</h1>
 				<div class="input-group col-lg-2 pull-right">
@@ -36,36 +35,23 @@
 			
 				 <br>  <h1>Most Popular Stories </h1> <br>
 				<p>
-				<table border="1" style="width:700px" align="center">
+{{#each popular}}
+				<table border="1" class="storiesTable" style="width:900px" align="center">
 <tr>
-  <td><b><a href="storiesJillsStory.html">Jill's Story</a></b> <br> I’m transgender, meaning the gender that was assigned 
-  to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a 
-  coherent way.</td>
-    <td class="hugs" >50 hugs <div title="Give a hug!">
+  <td><b><a href="storiesJillsStory.html">{{title}}</a></b> <br>
+			{{content}}</td>
+    <td class="hugs" >{{hugs}} hugs <div title="Give a hug!">
     
-    			<button type="button" class="btn btn-default"> 
+    			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
     </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
 </tr>
-</table>
 
+</table>
 <br>
-				<table border="1" style="width:700px" align="center">
+{{/each}}
 
-<tr>
-  <td><b> <a href="{{ pathFor 'storiesAllEve' }}">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
-    <td  class="hugs"  >50 hugs <div title="Give a hug!" > 
-    
-    
-			<button type="button" class="btn btn-default"> 
-				<img src="img/hug.png" >
-			</button>
-    
-    </div> <br> <a href="{{ pathFor 'storiesAllEve' }}">2 Comments </a><br> <br><a href="{{ pathFor 'storiesAllEve' }}"> Read More...</a></td> 
-
-</tr>
-</table>
 				</p>
 			</div>
 			<div class="tab-pane" id="topic1">
@@ -149,7 +135,7 @@
 			<div class="tab-pane active" id="all1">
 			 <br>	<h1>All Stories: Jill's Story</h1>  <br>
 				
-	<table border="1" style="width:700px" align="center">
+	<table border="1" class= "storiesTable" style="width:900px" align="center">
 <tr>
   <td><b>Jill's Story</b> <br> I’m transgender, meaning the gender that was assigned to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a coherent way. I started struggling when puberty hit, around age 12. I watched as my body
 turned what felt to me grotesquely masculine, and my mind began to feel as
@@ -172,7 +158,7 @@ suicide.
 </td>
     <td class="hugs" >50 hugs <div title="Give a hug!"> 
     
-        			<button type="button" class="btn btn-default"> 
+        			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
     
@@ -180,7 +166,7 @@ suicide.
     
     </div> <br> 2 Comments <br> <br> 
 	{{ > messages2 }}
-    <br>Stay Strong! <i>by anonymous</i> <br><br> I feel the exact same way. <i>by queerGuy101</i> <br> <br> <a href="{{ pathFor 'stories' }}"> <button class="btn btn-primary btn-lg" type="back" id="back">back to all stories</button></a>
+    <br>Stay Strong! <i>by anonymous</i> <br><br> I feel the exact same way. <i>by <a href="#">queerGuy101</a></i> <br> <br> <a href="{{ pathFor 'stories' }}"> <button class="btn btn-primary btn-lg" type="back" id="back">back to all stories</button></a>
     </td> 
 
 </tr>
