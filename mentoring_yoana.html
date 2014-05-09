@@ -4,6 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans*Network</title>
+	<script>
+	
+
+
+	</script>
+	
+		
   </head>
 
 	{{> nav_bar}}
@@ -92,18 +99,18 @@
 			<tr>
 				<td align="left">
 					<h3 align="left"> Message to potential mentor </h3>
-					<textarea align="left"></textarea>
+					<textarea id="request_text" align="left"></textarea>
 				</td>
 			</tr>
 			<tr align="left">
 				<td>
 					<h3> Anything else you want to share? </h3>
-					<textarea value="Request a mentor"></textarea>
+					<textarea id="request_text2" value="Request a mentor"></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td>
-				<div align="center"><button class="btn btn-primary" id="request_mentor" onclick="window.open('{{ pathFor 'mentor_request_confirm' }}', 'newwindow', 'width=500, height=100'); return false;">Submit Mentor Request</button></div>
+				<div align="center"><button class="btn btn-primary" id="request_mentor" onclick="window.open('{{ pathFor 'mentor_confirm' }}', 'newwindow', 'width=500, height=100'); return false;">Submit Mentor Request</button></div>
 				</td>
 			</tr>			
 		</table>
