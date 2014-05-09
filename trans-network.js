@@ -75,6 +75,7 @@ if (Meteor.isClient) {
 	};
 
 	Template.stories.popular = function () {
-		return Stories.find({hugs: {$gt: 9}});
+		return Stories.find({});
+		//return Stories.find({hugs: {$gt: 9}});
 	};
 }
