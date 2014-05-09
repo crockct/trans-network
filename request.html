@@ -1,114 +1,178 @@
- <template name="request"> 
-  <head>
+<template name="request">  
+ <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trans*Network</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="home.css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	<script>
-		$(function() {
-	  // Setup drop down menu
-	  $('.dropdown-toggle').dropdown();
-	 
-	  // Fix input element click problem
-	  $('.dropdown input, .dropdown label').click(function(e) {
-		e.stopPropagation();
-	  });
-	});
-	</script>
   </head>
-  <body>
-  	<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-	
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	{{> nav_bar}}
+<div class="container">
 	
-      <ul class="nav navbar-nav">
-		<li><a href="{{ pathFor 'index' }}"><img class="trans_logo" src="img/trans_logo.png"/></a></li>
-        <li><a href="{{ pathFor 'requestbecome' }}">Mentoring</a></li>
-		<li><a href="{{ pathFor 'questions' }}">Questions</a></li>
-		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
-		<li><a href="#">People</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-          <li><a href="sign_up.html">Sign Up</a></li>
-          <li class="divider-vertical"></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
-            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-              <!-- Login form here -->
-			  <form action="" method="post" accept-charset="UTF-8">
-			  <p> Username </p>
-			  <input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" />
-			  <p> Password </p>
-			  <input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" />
-			  <input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
-			  <label class="string optional" for="user_remember_me"> Remember me</label>
-			 
-			  <input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
-			  <p></p>
-			  </form>
-            </div>
-          </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 
-	<div class="container">
-	<div class="top">
-	<h1 style="width:600px; border:3px"> Request a mentor </h1>
-	<div class="faq"> 
-	<table class="faq" style="height:500px; width:500px">
+	<h1> Mentoring </h1> 
+	
+		<ul class="nav nav-tabs">
+			<li><a href="#default" data-toggle="tab">Home</a></li>
+			<li  class="active"><a href="#request"  data-toggle="tab">Request a mentor</a></li>
+			<li><a href="#become" data-toggle="tab">Become a mentor</a></li>
+			<li><a href="#faq" data-toggle="tab">Become a mentor FAQ</a></li>
+		</ul>
+		
+	<div class="tab-content">
+		<div class="tab-pane" id="default">
+				<h3 align="left"> Your Mentees </h3>
+				<table id ="mentees" border="1" style="height:600px; width:700px">
+					
+						
+					
+					<tr>
+						<td> alisa </td>
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						<td style="width:100%;height:100%">
+							<div style="border-style:double;">
+							<p style="text-align:left;">
+							<a href onclick="window.open('{{ pathFor 'urgent' }}', 'newwindow', 'width=500, height=400'); return false;">Re: Having problems -- Please respond</a>
+							<span style="float:right;">April 28, 2014 <br> 05:16PM</span>
+							</p>
+							<hr>
+							</div>
+							<br>
+							<div style="border-style:double;">
+							<p style="text-align:left;">
+							<a href onclick="window.open('{{ pathFor 'hey' }}', 'newwindow', 'width=500, height=400'); return false;">Hey!</a>
+							<span style="float:right;">April 30, 2014 <br> 04:36PM</span>
+							</p>
+							<hr>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td> ben</td> 
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						
+						<td> No messages </td>
+					</tr>
+					<tr>
+						<td> jim</td> 
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						<td>No messages</td>
+					</tr>
+					<tr>
+						<td> julia</td> 
+
+						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						<td> No messages </td>
+					</tr>					
+				</table><!-- end of mentee table -->
+<h3> You have no mentors </h3>
+			<table id="mentors" border="1">
+			</table>
+	</div> <!-- end of this tab pane -->
+
+	<div class="tab-pane active" id="request">
+	<h3 align="left"> Match me with someone who identifies as: </h3>
+		<table style="height:600px; width:700px">
+			<tr>
+				<td> 
+					<div class="col-md-10" align="left">
+						<label> 
+							<input type="radio" value="transman" name="gender">Transman</label>
+						<br><label>
+							<input type="radio" value="transwoman" name="gender">Transwoman</label>
+						<br>
+						<label>
+							<input type="radio" value="other" name="gender">Other
+						</label>
+							<input type="input" value="">
+					</div>
+				</td>
+				
+			</tr>
+			<tr>
+				<td align="left">
+					<h3 align="left"> Message to potential mentor </h3>
+					<textarea align="left"></textarea>
+				</td>
+			</tr>
+			<tr align="left">
+				<td>
+					<h3> Anything else you want to share? </h3>
+					<textarea value="Request a mentor"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<div align="center"><button class="btn btn-primary" id="request_mentor" onclick="window.open('{{ pathFor 'mentor_request_confirm' }}', 'newwindow', 'width=500, height=100'); return false;">Submit Mentor Request</button></div>
+				</td>
+			</tr>			
+		</table>
+		
+	</div><!-- end of this tab pane -->
+	
+	<div class="tab-pane" id="become">
+		<h3 align="left">Select one or more potential mentees</h3>
+		<table style="width:700px" id="available_mentees">
+			<tr>
+				<td>
+					<input type="checkbox"> 
+				</td>
+				<td> alisa </td>
+				<td>
+					<h3> Message of alisa</h3>
+					<p> I am a transwoman and I like spending time figuring out how to help the community. I am willing to spend much of my free time 
+to help others but first I am very much willing to learn from someone who has done community service </p>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td> jim </td>
+				<td><h3> Message of jim</h3>
+				<p> I am a transman and I am originally from Germany. I moved to the United States and I am excited to realize that the community here is larger than in most places in Europe. I am looking for someone to talk to and discuss how the community here is.	</p>
+				</td>
+	 		</tr>
+			<tr>
+				<td></td><td></td>
+				<td><div align="center"><button class="btn btn-primary" id="request_mentor" onclick="window.open('{{ pathFor 'mentee_confirm' }}', 'newwindow', 'width=500, height=100'); return false;">Request Mentees</button></div></td>
+	 		</tr>
+		</table><!-- end of available mentees taable -->
+	
+	</div><!-- end of this tab pane -->
+	
+	<div class="tab-pane" id="faq">
+	<h3 align="left"> Trans*Network Mentor FAQ </h3>
+	<table style="height:650px;width:700px">
 	<tr>
-	<td> <h3> Match me with someone who identifies as: </h3>
-	<form> 
-	<input type="radio" value="transman">Transman <br>
-	<input type="radio" value="transwoman"> Transwoman <br>
-	Other <input type="input" value="other">  </form>
+	<td> <h3> What is a mentor? </h3>
+	 Mentor is someone that is there to support you and answer your questions when you have some.
+			To be a mentor is a very rewarding experience as you get to teach people and advice
+			them on some specific hard periods of the transition. 
 	</td>
 	</tr>
 	<tr>
-	<td>
-	<h3> Message to potential mentor </h3>
-	<textarea class="form-control" id="qcontent" placeholder="Message" required></textarea>
-	</td>
+	<td> <h3>Why should I mentor? </h3>
+	 You should be a mentor because this is a chance to give back to the community.
+		It is alsmost for sure that you were helped by someone or many individual transgender people
+		when you were going through your own transition. Now, as a person who found who they are
+		and how to deal with situations, advice some people who are just begining the transition.</td>
 	</tr>
 	<tr>
-	<td>
-	<h3> Anything else you want to share? </h3><br>
-	<button style="color: blue"> Request a mentor </button>
-	</td>
+	<td> <h3> What can I do as a mentor? </h3>
+	 As a mentor you get to personal messages to your mentees when you want to 
+gice them advice or answer their questions. You get to be the source of information for them which
+is sometimes more importnat then the information they find on the internet. As such, your task is important
+but also very rewarding.	</td>
+	</tr>
+	<tr>
+		<td>
+		<div align="center"><h3> Think you are ready? </h3></div>
+		<button class="btn btn-primary" value="Become a mentor" onclick="window.open('{{ pathFor 'mentor_confirm' }}', 'newwindow', 'width=500, height=100'); return false;">Become a mentor</button>
+		</td>
 	</tr>
 	</table>
+	</div>
 	
-	</div>
-	</div>
-	</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+</div>
+</div>
+
 </template>

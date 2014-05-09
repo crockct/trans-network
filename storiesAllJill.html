@@ -118,9 +118,11 @@
 			</div>
 			<div class="tab-pane" id="myStory">
 			 <br>	<h1>Your Story</h1> <br>
-							<table border="1" style="width:700px" align="center">
+							<table border="1" class="storiesTable" style="width:900px" align="center">
 <tr>
-  <td><b>My Story</b> <br> I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.</td>
+  <td><b>My Story</b><br><div id="update"> Edit the text below and click to save for next time</div> <br> <div id="edit" contenteditable="true" style="border-style:solid;">
+	I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.
+	</div></td>
   <td class="hugs" >50 hugs <div title="Give a hug!"> <img src="img/hug.png" ></div> <br> 0 Comments  </td> 
 
 </tr>
@@ -182,7 +184,30 @@ suicide.
 	
 	</div><!-- end container used for content -->
 	
+	<script>
+	function saveEdits() {
+
+	//get the editable element
+	var editElem = document.getElementById("edit");
+
+	//get the edited element content
+	var userVersion = editElem.innerHTML;
+
+	//save the content to local storage
+	localStorage.userEdits = userVersion;
+
+	//write a confirmation to the user
+	document.getElementById("update").innerHTML="Edits saved!";
+
+	}
 	
+	function checkEdits() {
+
+	//find out if the user has previously saved edits
+	if(localStorage.userEdits!=null)
+	document.getElementById("edit").innerHTML = localStorage.userEdits;
+	}
+</script>	
 
    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
