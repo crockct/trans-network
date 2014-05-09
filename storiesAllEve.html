@@ -27,7 +27,6 @@
 		
 		$(function() {
 			$("#eve_hugs").html(String(evehugs));
-			document.write("testing");
 		});
 		
 	</script>
@@ -83,7 +82,7 @@
 		
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
-			<li ><a href="#hot1" data-toggle="tab">Hot Stories</a></li>
+			<li ><a href="{{ pathFor 'stories' }}" >Hot Stories</a></li>
 			<li><a href="#topic1" data-toggle="tab">By Topic</a></li>
 			<li><a href="#followed1" data-toggle="tab">Followed</a></li>
 			<li><a href="#myStory" data-toggle="tab">My Story</a></li>
@@ -243,9 +242,9 @@
 
 </table>
 
-<br>
+<br>{{ > input }}
 			</div>
-			<br>{{ > input }}
+			
 			
 		</div>
 		
