@@ -28,7 +28,8 @@ Router.map(function() {
   this.route('hey'),
   this.route('pm'),
   this.route('mentor_confirm'),
-  this.route('mentee_confirm')
+  this.route('mentee_confirm'),
+  this.route('mentor_request_confirm')
 
 });
 
