@@ -50,7 +50,7 @@
 	color: #f46e8e;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 676px) {
 	.navbar-default .navbar-nav .open .dropdown-menu > li > a {
 		color: #ecf0f1;
 	}
@@ -78,6 +78,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+	
 }
 .logo{
 
@@ -85,11 +86,13 @@ body{
     margin-left: auto;
     margin-right: auto;
 	margin-top: 30px;
+	left: 250px;
+	position: absolute;
 }
 .questions {
     background: none repeat scroll 0 0;
 	top: 200px;
-	left: 220px;
+	left: 210px;
     position: absolute; /* this is so that the text is over the picture */
 	font-family: helvetica;
 	text-align: center
@@ -106,8 +109,8 @@ body{
 
 .mentors {
     background: none repeat scroll 0 0;
-	top: -20px;
-	left: 460px;
+	top: -30px;
+	left: 450px;
     position: absolute; /* this is so that the text is over the picture */
 	font-family: helvetica;
 	text-align: center
