@@ -42,7 +42,7 @@
 			{{content}}</td>
     <td class="hugs" >{{hugs}} hugs <div title="Give a hug!">
     
-    			<button type="button" class="btn btn-default"> 
+    			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
     </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
@@ -57,7 +57,7 @@
 			<div class="tab-pane" id="topic1">
 			
 				 <br><h1>Topics </h1> <br>
-				<table border="1" style="width:700px" align="center">
+				<table border="1" class="storiesTable" style="width:900px"  align="center">
 <tr>
   <td>
   
@@ -87,7 +87,7 @@
 			{{content}}</td>
     <td class="hugs" >{{hugs}} hugs <div title="Give a hug!">
     
-    			<button type="button" class="btn btn-default"> 
+    			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
     </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
@@ -99,13 +99,13 @@
 			</div>
 			<div class="tab-pane" id="myStory">
 			 <br>	<h1>Your Story</h1> <br>
-							<table border="1" style="width:700px" align="center">
+							<table border="1" class="storiesTable" style="width:900px" align="center">
 <tr>
   <td><b>My Story</b> <br> I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.</td>
   <td class="hugs" >50 hugs <div title="Give a hug!"> 
   
   
-  			<button type="button" class="btn btn-default"> 
+  			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
   
@@ -125,38 +125,23 @@
 			<div class="tab-pane" id="all1">
 			 <br>	<h1>All Stories</h1>  <br>
 				
-	<table border="1" style="width:700px" align="center">
+	{{#each popular}}
+				<table border="1" class="storiesTable" style="width:900px" align="center">
 <tr>
-	<td>
-		<b><a href="storiesAllJill.html">Jill's Story</a></b> 
-		<br> I’m transgender, meaning the gender that was assigned to me at birth doesn’t match the gender I identify with. For most of my life, I couldn’t articulate this feeling in a coherent way.
-	</td>
-    <td class="hugs">
-		50 hugs 
-		<div title="Give a hug!">
-			<button type="button" class="btn btn-default"> 
+  <td><b><a href="storiesJillsStory.html">{{title}}</a></b> <br>
+			{{content}}</td>
+    <td class="hugs" >{{hugs}} hugs <div title="Give a hug!">
+    
+    			<button type="button" class="btn btn-default hugbtn"> 
 				<img src="img/hug.png" >
 			</button>
-		</div> <br><a href="storiesAllJill.html"> 2 Comments </a> <br> <br> <a href="storiesAllJill.html">Read More...</a></td> 
-
+    </div> <br><a href="{{ pathFor 'storiesAllJill' }}"> 2 Comments </a> <br> <br> <a href="{{ pathFor 'storiesAllJill' }}">Read More...</a></td> 
 </tr>
 
 </table>
-
 <br>
-				<table border="1" style="width:700px" align="center">
+{{/each}}
 
-<tr>
-  <td><b> <a href="storiesAllEve.html">Eve's Story</a> </b> <br> I've just got off the phone with one of my childhood bullies. He used to call me names and hit me on the way home from school, but we're friends now. He's slightly in awe of my life today and, to be honest, so am I. This year has been intense. </td>
-    <td  class="hugs"  >50 hugs <div title="Give a hug!" >	
-    		<button type="button" class="btn btn-default"> 
-				<img src="img/hug.png" >
-			</button>
-			</div> <br> <a href="storiesAllEve.html">2 Comments </a><br> <br><a href="storiesAllEve.html"> Read More...</a></td> 
-
-</tr>
-</table>
-<br>
 			</div>
 			
 		</div>
