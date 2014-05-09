@@ -20,7 +20,7 @@ Router.map(function() {
    this.route('storiesAllJill'),
   this.route('mentoring'),
    this.route('storiesMyStory'),
-  
+  this.route('search_stories'),
    this.route('pm')
 });
 
