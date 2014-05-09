@@ -1,5 +1,6 @@
 <template name="nav_bar">
 <nav class="navbar navbar-default" role="navigation">
+  <div style="padding-top: 3px"></div>
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -22,9 +23,10 @@
 		<li><a href="{{ pathFor 'stories' }}">Stories</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-		  <li>User: <br>cheesecakeboi</li>
-		  <li class="divider-vertical"></li>
 		  <li><img src="img/avatar.jpg" height="40" width="40"></li>
+		  <li class="divider-vertical"></li>
+		  <li style="text-align: left">Logged in as <br>cheesecakeboi</li>
+		  
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
