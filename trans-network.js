@@ -1,5 +1,6 @@
 // Collections (to model data)
 Messages = new Meteor.Collection("messages");
+Messages2 = new Meteor.Collection("messages2");
 Questions = new Meteor.Collection("questions");
 Stories = new Meteor.Collection("stories");
 
@@ -18,6 +19,8 @@ Router.map(function() {
    this.route('storiesAllEve'),
    this.route('storiesAllJill'),
   this.route('mentoring'),
+   this.route('storiesMyStory'),
+  
    this.route('pm')
 });
 
