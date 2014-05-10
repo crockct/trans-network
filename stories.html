@@ -9,16 +9,14 @@
 	<div class="container">
 		<h1>Stories</h1>
 
-	
+				<!-- Search -->
 				<div class="input-group col-lg-2 pull-right">
-				<input type="text" height="34px" class="input-control pull-right-nopad heightchange"  placeholder="Search Stories">
+				<input type="text" height="34px" class="input-control pull-right-nopad"  placeholder="Search Stories">
 					<span class="input-group-btn">
 						<a class="btn btn-default" href="{{ pathFor 'search_stories'}}"><i class="glyphicon glyphicon-search"></i></a>
 				</span>
 			</div><!-- /input-group -->
 			
-			
-		
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="#hot1" data-toggle="tab">Hot Stories</a></li>
@@ -31,12 +29,11 @@
 		<!-- Tab Pane Contents (from http://getbootstrap.com/javascript/#tabs) -->
 		<div class="tab-content">
 			<div class="tab-pane active" id="hot1">
-			
-			
-				 <br>  <h1>Most Popular Stories </h1> <br>
+				<br>  
+				<h1>Most Popular Stories</h1> <br>
 				<p>
 {{#each popular}}
-				<table border="1" class="storiesTable" style="width:900px" align="center">
+				<table border="1" class="contentTable" style="width:900px" align="center">
 <tr>
   <td><b><a href="{{ pathFor 'storiesAllJill' }}">{{title}}</a></b> <br>
 			{{content}}</td>
@@ -57,7 +54,7 @@
 			<div class="tab-pane" id="topic1">
 			
 				 <br><h1>Topics </h1> <br>
-				<table border="1" class="storiesTable" style="width:900px"  align="center">
+				<table border="1" class="contentTable" style="width:900px"  align="center">
 <tr>
   <td>
   
@@ -81,7 +78,7 @@
 				 <br><h1>Followed Stories </h1>
 				<br>
 {{#each popular}}
-				<table border="1" class="storiesTable" style="width:900px" align="center">
+				<table border="1" class="contentTable" style="width:900px" align="center">
 <tr>
   <td><b><a href="{{ pathFor 'storiesAllJill' }}">{{title}}</a></b> <br>
 			{{content}}</td>
@@ -99,7 +96,7 @@
 			</div>
 			<div class="tab-pane" id="myStory">
 			 <br>	<h1>Your Story</h1> <br>
-							<table border="1" class="storiesTable" style="width:900px" align="center">
+							<table border="1" class="contentTable" style="width:900px" align="center">
 <tr>
   <td><b>My Story</b><br><div id="update"> Edit the text below and click to save for next time</div> <br> <div id="edit" contenteditable="true" style="border-style:solid;">
 	I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.
@@ -128,7 +125,7 @@
 			 <br>	<h1>All Stories</h1>  <br>
 				
 	{{#each popular}}
-				<table border="1" class="storiesTable" style="width:900px" align="center">
+				<table border="1" class="contentTable" style="width:900px" align="center">
 <tr>
   <td><b><a href="{{ pathFor 'storiesAllJill' }}">{{title}}</a></b> <br>
 			{{content}}</td>

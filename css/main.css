@@ -1,11 +1,7 @@
 
 /* All CSS we write goes in this file */
-.storiesTable{
+.contentTable{ /* good spacing for reading long content */
 	text-align: left;
-	font-size: 150%;
-	line-height: 175%;
-}
-.questionsTable{
 	font-size: 150%;
 	line-height: 175%;
 }
