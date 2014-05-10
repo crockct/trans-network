@@ -2,21 +2,10 @@
  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trans*Network</title>
-	<script>
-	
-
-
-	</script>
-	
-		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	
   </head>
-
 	{{> nav_bar}}
 <div class="container">
-	
-
 	<h1> Mentoring </h1> 
 	
 		<ul class="nav nav-tabs">
@@ -28,14 +17,9 @@
 		
 	<div class="tab-content">
 		<div class="tab-pane active" id="default">
-				<h3 align="left"> Your Mentees </h3>
-				<table id ="mentees" border="1" style="height:600px; width:700px">
-					
-						
-					
+				<h2>Your Mentees</h2>
+				<table id ="mentees" border="1" class="contentTable" style="width:900px" align="center">
 					<tr>
-						<td> alisa </td>
-						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td style="width:100%;height:100%">
 							<div style="border-style:double;">
 							<p style="text-align:left;">
@@ -53,43 +37,50 @@
 							<hr>
 							</div>
 						</td>
+						<td> 
+							alisa
+							<br><button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button>
+						</td>
 					</tr>
 					<tr>
-						<td> ben</td> 
-						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
-						
-						<td> No messages </td>
-					</tr>
-					<tr>
-						<td> jim</td> 
-						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
 						<td>No messages</td>
+						<td> ben
+							<br><button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button>
+						</td>
 					</tr>
 					<tr>
-						<td> julia</td> 
-
-						<td> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button></td>
+						<td>No messages</td>
+						<td> jim 
+							<br><button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button>
+						</td>
+					</tr>
+					<tr>
 						<td> No messages </td>
+						<td> julia
+							<br> <button class="btn btn-primary" id="envelope" onclick="window.open('{{ pathFor 'pm' }}', 'newwindow', 'width=500, height=400'); return false;"><span class="glyphicon glyphicon-envelope"></span></button>
+						</td>
 					</tr>					
 				</table><!-- end of mentee table -->
-<h3> You have no mentors </h3>
+<h2> You have no mentors </h2>
 			<table id="mentors" border="1">
 			</table>
 	</div> <!-- end of this tab pane -->
 
 	<div class="tab-pane" id="request">
-	<h3 align="left"> Match me with someone who identifies as: </h3>
-		<table style="height:600px; width:700px">
+	<table style="height:600px; width:700px">
+	
+		
 			<tr>
 				<td> 
 					<div class="col-md-10" align="left">
+<h3 align="left"> Match me with someone who identifies as: </h3>
 						<label> 
-							<input type="radio" value="transman" name="gender">Transman</label>
+							<input type="radio" value="transman" name="gender">&nbsp;Transman</label>
 						<br><label>
-							<input type="radio" value="transwoman" name="gender">Transwoman</label>
+							<input type="radio" value="transwoman" name="gender">&nbsp;Transwoman</label>
 						<br>
 						<label>
-							<input type="radio" value="other" name="gender">Other
+							<input type="radio" value="other" name="gender">&nbsp;Other
 						</label>
 							<input type="input" value="">
 					</div>
@@ -147,24 +138,22 @@ to help others but first I am very much willing to learn from someone who has do
 	</div><!-- end of this tab pane -->
 	
 	<div class="tab-pane" id="faq">
-	<h3 align="left"> Trans*Network Mentor FAQ </h3>
-	<table style="height:650px;width:700px">
+	<h3> Trans*Network Mentor FAQ </h3>
+	<table class="contentTable" style="height:650px;width:700px">
 	<tr>
-	<td> <h3> What is a mentor? </h3>
-	 Mentor is someone that is there to support you and answer your questions when you have some.
-			To be a mentor is a very rewarding experience as you get to teach people and advice
-			them on some specific hard periods of the transition. 
+	<td> <b> What is a mentor? </b>
+	A Mentor is someone that is there to support you and answer your questions when you have some. Being a mentor is a very rewarding experience as you get to teach people and advise them on some specific hard periods of the transition. 
 	</td>
 	</tr>
 	<tr>
-	<td> <h3>Why should I mentor? </h3>
+	<td> <b>Why should I mentor? </b>
 	 You should be a mentor because this is a chance to give back to the community.
-		It is alsmost for sure that you were helped by someone or many individual transgender people
+		It is likely that you were helped by someone or many individual transgender people
 		when you were going through your own transition. Now, as a person who found who they are
-		and how to deal with situations, advice some people who are just begining the transition.</td>
+		and how to deal with situations, advise some people who are just begining the transition.</td>
 	</tr>
 	<tr>
-	<td> <h3> What can I do as a mentor? </h3>
+	<td> <b> What can I do as a mentor? </b>
 	 As a mentor you get to personal messages to your mentees when you want to 
 gice them advice or answer their questions. You get to be the source of information for them which
 is sometimes more importnat then the information they find on the internet. As such, your task is important
