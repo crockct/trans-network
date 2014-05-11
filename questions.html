@@ -18,17 +18,17 @@
 			
 		<!-- Tabs used for navagation -->
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
-			<li><a href="#topic" data-toggle="tab">By Topic</a></li>
-			<li><a href="#followed" data-toggle="tab">Followed&nbsp;<span class="badge">2</span></a></li>
-			<li><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
-			<li><a href="#all" data-toggle="tab">All Questions</a></li>
-			<li><a href="#askq" data-toggle="tab">Ask a question</a></li>
+			<li class="{{ isActiveRoute 'hot'}}"><a href="#hot" data-toggle="tab">Hot Answers</a></li>
+			<li class="{{ isActiveRoute 'topics'}}"><a href="#topic" data-toggle="tab">By Topic</a></li>
+			<li class="{{ isActiveRoute 'followed'}}"><a href="#followed" data-toggle="tab">Followed&nbsp;<span class="badge">2</span></a></li>
+			<li class="{{ isActivePath 'unanswered'}}"><a href="#unanswered" data-toggle="tab">Unanswered</a></li>
+			<li class="{{ isActiveRoute 'allq'}}"><a href="#all" data-toggle="tab">All Questions</a></li>
+			<li class="{{ isActivePath 'askq'}}"><a href="#askq" data-toggle="tab">Ask a question</a></li>
 		</ul>
 		
 		<!-- Tab Pane Contents (from http://getbootstrap.com/javascript/#tabs) -->
 		<div class="tab-content">
-			<div class="tab-pane active" id="hot">
+			<div class="tab-pane {{ isActiveRoute 'hot'}}" id="hot">
 				<br>
 				<h1>Most Popular Answers</h1> <br>
 				<p>
@@ -110,6 +110,7 @@
 						</td>
 					</tr>
 				</table>
+				<br>
 			</div>
 			<div class="tab-pane" id="followed">
 			<br><h1>Followed Questions </h1><br>
@@ -134,8 +135,9 @@
 					</tr>
 			{{/each}}
 				</table>
+				<br>
 			</div>
-			<div class="tab-pane" id="unanswered">
+			<div class="tab-pane {{ isActivePath 'unanswered'}}" id="unanswered">
 			<br><h1> Unanswered Questions</h1>
 				<table border="1" class="contentTable" align="center" id="unansweredQuestionsTable">
 					{{#each unanswered}}
@@ -158,6 +160,7 @@
 					</tr>
 					{{/each}}
 				</table>
+				<br>
 			</div>
 			<div class="tab-pane" id="all">
 			<br>	<h1>All Questions</h1><br>
@@ -217,8 +220,9 @@
 						</td>
 					</tr>
 				</table>
+				<br>
 			</div>
-			<div class="tab-pane" id="askq">
+			<div class="tab-pane {{ isActivePath 'askq'}}" id="askq">
 				<!-- Ask a Question -->
 				<form class="row navbar-form" id="askquestion">
 					<h1>Ask a Question</h1>

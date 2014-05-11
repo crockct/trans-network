@@ -14,6 +14,10 @@ Router.map(function() {
   this.route('index', {path: '/', }),
   this.route('requestbecome'),
   
+  // Routes for tabs
+  this.route('questions#askq');
+  this.route('questions#unanswered');
+
   this.route('request'),
   this.route('become'),
   this.route('storiesAllEve'),
@@ -22,8 +26,6 @@ Router.map(function() {
   this.route('storiesMyStory'),
   this.route('search_stories'),
   this.route('search_questions'),
-  this.route('answer_questions'),
-  this.route('ask_questions'),
   this.route('urgent'),
   this.route('hey'),
   this.route('pm'),

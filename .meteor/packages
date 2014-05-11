@@ -11,3 +11,4 @@ bootstrap
 accounts-base
 accounts-google
 iron-router
+iron-router-active
