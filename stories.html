@@ -94,10 +94,11 @@
 {{/each}}
 			</div>
 			<div class="tab-pane" id="myStory">
-			 <br>	<h1>Your Story</h1> <br>
-							<table border="1" class="contentTable" style="width:900px" align="center">
+			<br>	<h1>Your Story</h1> <br>
+			<div id="update"><p> Edit the text below and click to save for next time</p></div>
+			<table border="1" class="contentTable" style="width:900px" align="center">
 <tr>
-  <td><b>My Story</b><br><div id="update"> Edit the text below and click to save for next time</div> <br> <div id="edit" contenteditable="true" style="border-style:solid;">
+  <td><div id="edit" contenteditable="true">
 	I always knew I was a girl, but for years that life seemed an impossible dream. It was a difficult journey involving sex work, depression and a spell in a mental institution.
 	</div></td>
   <td class="hugs" >50 hugs <div title="Give a hug!"> 
@@ -116,7 +117,7 @@
 </table>
 <br>
 <p align="center">
-<button class="btn btn-primary btn-lg" type="edit my story" id="edit" value="save my edits" onclick="saveEdits()">save my story</button>
+<button class="btn btn-primary btn-lg" type="edit my story" id="edit" value="save my edits" onclick="saveEdits()">Save</button>
 				</p>
 				
 			</div>
